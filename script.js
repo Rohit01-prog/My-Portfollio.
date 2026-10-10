@@ -96,45 +96,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+
 // --- ADVANCED REAL SWAG PARALLAX SYSTEM ---
 document.addEventListener('DOMContentLoaded', () => {
-    const pagePath = window.location.pathname.toLowerCase();
-    let pageConfig = [];
-
-    // Configuration for each page's swag items
-    // bg: image file, size: background-size, pos: background-position, label: text, startX/Y: initial position (vw/vh), speedX/Y: parallax factor
-    if (pagePath.includes('index') || pagePath === '/' || pagePath.endsWith('/')) {
-        pageConfig = [
-            { bg: 'aws_swag_real.png', size: '180%', pos: '10% 80%', label: 'Community Bag', startX: 5, startY: 15, speedY: 0.1, delay: '0s' },
-            { bg: 'aws_swag_3.png', size: '150%', pos: '50% 30%', label: 'Zip Hoodie', startX: 80, startY: 70, speedY: 0.2, delay: '1s' }
-        ];
-    } else if (pagePath.includes('about')) {
-        pageConfig = [
-            { bg: 'aws_swag_real.png', size: '250%', pos: '40% 10%', label: 'Builder Tumbler', startX: 80, startY: 15, speedY: 0.15, delay: '0.5s' },
-            { bg: 'aws_swag_2.png', size: '250%', pos: '30% 15%', label: 'Specialist Mug', startX: 5, startY: 60, speedY: -0.1, delay: '0s' }
-        ];
-    } else if (pagePath.includes('project')) {
-        pageConfig = [
-            { bg: 'aws_swag_real.png', size: '220%', pos: '70% 15%', label: 'Builder Cap', startX: 10, startY: 75, speedY: -0.15, delay: '0s' },
-            { bg: 'aws_swag_2.png', size: '200%', pos: '35% 85%', label: 'Specialist Notebook', startX: 75, startY: 20, speedY: 0.2, delay: '0.8s' }
-        ];
-    } else if (pagePath.includes('achievement')) {
-        pageConfig = [
-            { bg: 'aws_swag_real.png', size: '250%', pos: '30% 95%', label: 'Builder Stickers', startX: 80, startY: 70, speedY: 0.1, delay: '0.3s' },
-            { bg: 'aws_swag_2.png', size: '150%', pos: '80% 60%', label: 'Specialist Jacket', startX: 10, startY: 25, speedY: -0.2, delay: '1.2s' }
-        ];
-    } else if (pagePath.includes('contact')) {
-        pageConfig = [
-            { bg: 'aws_swag_real.png', size: '300%', pos: '95% 90%', label: 'Cables & Tech', startX: 15, startY: 80, speedY: -0.1, delay: '0s' },
-            { bg: 'aws_swag_2.png', size: '300%', pos: '45% 95%', label: 'OneTeam Stickers', startX: 75, startY: 60, speedY: 0.15, delay: '0.7s' },
-            { bg: 'aws_swag_real.png', size: '250%', pos: '80% 50%', label: 'Notebook', startX: 50, startY: 15, speedY: 0.2, delay: '0.5s' } // Extra for contact
-        ];
-    } else {
-        // Fallback
-        pageConfig = [
-            { bg: 'aws_swag_real.png', size: '180%', pos: '10% 80%', label: 'Community Bag', startX: 10, startY: 20, speedY: 0.1, delay: '0s' }
-        ];
-    }
+    // Generate an array of all possible swag parts from the 3 images
+    const allSwags = [
+        { bg: 'aws_swag_real.png', size: '200%', pos: '10% 80%', label: 'Community Bag' },
+        { bg: 'aws_swag_real.png', size: '250%', pos: '40% 10%', label: 'Builder Tumbler' },
+        { bg: 'aws_swag_real.png', size: '250%', pos: '70% 15%', label: 'Builder Cap' },
+        { bg: 'aws_swag_real.png', size: '300%', pos: '30% 95%', label: 'Builder Stickers' },
+        { bg: 'aws_swag_real.png', size: '350%', pos: '95% 90%', label: 'Cables & Tech' },
+        { bg: 'aws_swag_2.png', size: '250%', pos: '30% 15%', label: 'Specialist Mug' },
+        { bg: 'aws_swag_2.png', size: '200%', pos: '35% 85%', label: 'Specialist Notebook' },
+        { bg: 'aws_swag_2.png', size: '150%', pos: '80% 60%', label: 'Specialist Jacket' },
+        { bg: 'aws_swag_2.png', size: '300%', pos: '45% 95%', label: 'OneTeam Stickers' },
+        { bg: 'aws_swag_3.png', size: '150%', pos: '50% 30%', label: 'Zip Hoodie' },
+        { bg: 'aws_swag_3.png', size: '150%', pos: '40% 60%', label: 'Zip Hoodie Pocket' }
+    ];
 
     const container = document.createElement('div');
     container.style.position = 'fixed';
@@ -143,22 +122,31 @@ document.addEventListener('DOMContentLoaded', () => {
     container.style.width = '100vw';
     container.style.height = '100vh';
     container.style.pointerEvents = 'none';
-    container.style.zIndex = '50'; // High enough to see, but not block clicks
+    container.style.zIndex = '0'; // Above background, but behind relative text
     document.body.appendChild(container);
 
     const activeSwags = [];
+    const numItems = 2 + Math.floor(Math.random() * 2); // 2 or 3 items max
 
-    pageConfig.forEach((cfg, index) => {
+    for(let i = 0; i < numItems; i++) {
+        const cfg = allSwags[Math.floor(Math.random() * allSwags.length)];
+        
         const wrapper = document.createElement('div');
         wrapper.className = 'real-swag-container';
-        // Override CSS classes for dynamic placement
-        wrapper.style.bottom = 'auto';
-        wrapper.style.right = 'auto';
-        wrapper.style.left = cfg.startX + 'vw';
-        wrapper.style.top = cfg.startY + 'vh';
-        wrapper.style.animationDelay = cfg.delay;
         
-        // 3D Tilt Effect on mousemove will be applied to inner card
+        // Random starting X position
+        const startX = Math.random() * 90;
+        wrapper.style.left = startX + 'vw';
+        
+        // Use CSS Animation for Header to Footer continuous movement
+        const animDuration = 25 + Math.random() * 15; // 10s to 25s
+        const animDelay = -(Math.random() * 10); // Start at random point in animation
+        wrapper.style.animation = "floatHeaderToFooter " + animDuration + "s ease-in-out infinite";
+        wrapper.style.animationDelay = animDelay + "s";
+        
+        // Add random X drift
+        const speedX = (Math.random() - 0.5) * 1.5; 
+        
         const card = document.createElement('div');
         card.style.width = '100%';
         card.style.height = '100%';
@@ -180,34 +168,19 @@ document.addEventListener('DOMContentLoaded', () => {
         wrapper.appendChild(card);
         container.appendChild(wrapper);
 
-        activeSwags.push({ wrapper: wrapper, card: card, speedY: cfg.speedY, startY: cfg.startY });
-    });
-
-    // Parallax on Scroll
-    window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        for (let i = 0; i < activeSwags.length; i++) {
-            const item = activeSwags[i];
-            const moveY = scrollY * item.speedY;
-            // Move the wrapper
-            item.wrapper.style.transform = "translateY(" + moveY + "px)";
-        }
-    });
-
-    // Interactive 3D Tilt on Mouse Move
+        activeSwags.push({ wrapper: wrapper, card: card, speedX: speedX });
+    }
     window.addEventListener('mousemove', (e) => {
         const mouseX = e.clientX;
         const mouseY = e.clientY;
         const centerX = window.innerWidth / 2;
         const centerY = window.innerHeight / 2;
         
-        // Calculate tilt
-        const tiltX = (centerY - mouseY) / 40;
-        const tiltY = (mouseX - centerX) / 40;
+        const tiltX = (centerY - mouseY) / 20;
+        const tiltY = (mouseX - centerX) / 20;
 
         for (let i = 0; i < activeSwags.length; i++) {
-            const item = activeSwags[i];
-            item.card.style.transform = "perspective(1000px) rotateX(" + tiltX + "deg) rotateY(" + tiltY + "deg)";
+            activeSwags[i].card.style.transform = "perspective(800px) rotateX(" + tiltX + "deg) rotateY(" + tiltY + "deg)";
         }
     });
 });
