@@ -61,7 +61,7 @@
                 <div class="availability" style="margin-bottom: 2rem; margin-top: 1rem;">
                     <div style="font-size: 1.3rem; color: #10b981; font-weight: 700; border: 2px solid rgba(16, 185, 129, 0.6); padding: 1.2rem 2rem; border-radius: 12px; display: inline-flex; align-items: center; background: rgba(16, 185, 129, 0.1); box-shadow: 0 0 25px rgba(16, 185, 129, 0.3); text-transform: uppercase; letter-spacing: 1px;">
                         <span class="status-dot" style="width: 16px; height: 16px; margin-right: 15px; display: inline-block;"></span> 
-                        Seeking Internship & Ready to join AWS
+                        Seeking internships | Learning AWS cloud
                     </div>
                 </div>
 
@@ -77,7 +77,7 @@
                 <div class="social-links" style="margin-top: 2rem; gap: 1.5rem;">
                     <a href="https://github.com/Rohit01-prog" style="width: 55px; height: 55px; font-size: 2rem; background: #333; color: white; border-color: #333; box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: all 0.3s;"><i class="ph-fill ph-github-logo"></i></a>
                     <a href="https://linkedin.com/in/rohit-maurya-3940b3397" style="width: 55px; height: 55px; font-size: 2rem; background: #0077b5; color: white; border-color: #0077b5; box-shadow: 0 5px 15px rgba(0, 119, 181, 0.3); transition: all 0.3s;"><i class="ph-fill ph-linkedin-logo"></i></a>
-                    <a href="mailto:rohit.bcastudent25.30916@cimage.in" style="width: 55px; height: 55px; font-size: 2rem; background: #ea4335; color: white; border-color: #ea4335; box-shadow: 0 5px 15px rgba(234, 67, 53, 0.3); transition: all 0.3s;"><i class="ph-fill ph-envelope-simple"></i></a>
+                    <a href="#" onclick="window.location.href='mailto:rohit.bcastudent25.30916@cimage.in'; return false;" title="rohit.bcast************@cimage.in" style="width: 55px; height: 55px; font-size: 2rem; background: #ea4335; color: white; border-color: #ea4335; box-shadow: 0 5px 15px rgba(234, 67, 53, 0.3); transition: all 0.3s; display: flex; align-items: center; justify-content: center;"><i class="ph-fill ph-envelope-simple"></i></a>
                 </div>
             </div>
             
@@ -261,19 +261,19 @@
                     </div>
                     <!-- Code -->
                     <div style="color: #d4d4d4; white-space: pre; overflow-x: auto;">
-<span style="color: #c586c0;">import</span> <span style="color: #4ec9b0;">cv2</span>
-<span style="color: #c586c0;">import</span> <span style="color: #4ec9b0;">mistralai</span>
-<span style="color: #c586c0;">from</span> aws_services <span style="color: #c586c0;">import</span> CloudDeploy
+<span style="color: #6a9955;"># Illustrative example</span>
+<span style="color: #c586c0;">import</span> cv2
+<span style="color: #c586c0;">import</span> mediapipe <span style="color: #c586c0;">as</span> mp
 
-<span style="color: #569cd6;">class</span> <span style="color: #4ec9b0;">VisionEngine</span>:
+<span style="color: #569cd6;">class</span> <span style="color: #4ec9b0;">HandTracker</span>:
     <span style="color: #569cd6;">def</span> <span style="color: #dcdcaa;">__init__</span>(<span style="color: #9cdcfe;">self</span>):
-        <span style="color: #9cdcfe;">self</span>.model = mistralai.load_model(<span style="color: #ce9178;">"latest-v2"</span>)
-        <span style="color: #9cdcfe;">self</span>.camera = cv2.VideoCapture(<span style="color: #b5cea8;">0</span>)
-        <span style="color: #6a9955;"># Ready for deployment</span>
+        <span style="color: #9cdcfe;">self</span>.mp_hands = mp.solutions.hands
+        <span style="color: #9cdcfe;">self</span>.hands = <span style="color: #9cdcfe;">self</span>.mp_hands.Hands()
         
     <span style="color: #569cd6;">def</span> <span style="color: #dcdcaa;">process_frame</span>(<span style="color: #9cdcfe;">self</span>, <span style="color: #9cdcfe;">frame</span>):
-        <span style="color: #6a9955;"># Analyze hand gestures in real-time</span>
-        <span style="color: #c586c0;">return</span> <span style="color: #9cdcfe;">self</span>.model.analyze(frame)
+        <span style="color: #6a9955;"># Detect hand landmarks in real-time</span>
+        results = <span style="color: #9cdcfe;">self</span>.hands.process(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
+        <span style="color: #c586c0;">return</span> results
                     </div>
                 </div>
             </div>
@@ -415,7 +415,7 @@
                 <div class="social-links" style="justify-content: center; gap: 1rem;">
                     <a href="https://github.com/Rohit01-prog" style="width: 40px; height: 40px; font-size: 1.2rem; background: #333; color: white; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="ph-fill ph-github-logo"></i></a>
                     <a href="https://linkedin.com/in/rohit-maurya-3940b3397" style="width: 40px; height: 40px; font-size: 1.2rem; background: #0077b5; color: white; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="ph-fill ph-linkedin-logo"></i></a>
-                    <a href="mailto:rohit.bcastudent25.30916@cimage.in" style="width: 40px; height: 40px; font-size: 1.2rem; background: #ea4335; color: white; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="ph-fill ph-envelope-simple"></i></a>
+                    <a href="#" onclick="window.location.href='mailto:rohit.bcastudent25.30916@cimage.in'; return false;" title="rohit.bcast************@cimage.in" style="width: 40px; height: 40px; font-size: 1.2rem; background: #ea4335; color: white; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="ph-fill ph-envelope-simple"></i></a>
                 </div>
 
                 <!-- Copyright -->
