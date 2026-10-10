@@ -76,3 +76,84 @@ window.addEventListener('scroll', () => {
         ticking = true;
     }
 });
+
+
+// --- DEVELOPER SWAG FLOATING PARALLAX ANIMATION ---
+// Added as per user request to scatter animated white/orange/yellow swags across all pages
+document.addEventListener('DOMContentLoaded', () => {
+    const colors = ['#ffffff', '#f59e0b', '#fbbf24', '#f97316']; 
+    const swags = [
+        { icon: 'ph-t-shirt', label: 'AWS' },
+        { icon: 'ph-coat', label: '' },
+        { icon: 'ph-drop', label: '' },
+        { icon: 'ph-flask', label: '' },
+        { icon: 'ph-coffee', label: '' },
+        { icon: 'ph-sticker', label: '' },
+        { icon: 'ph-t-shirt', label: 'DEV' },
+        { icon: 'ph-backpack', label: '' },
+        { icon: 'ph-sunglasses', label: '' }
+    ];
+
+    const container = document.createElement('div');
+    container.id = 'swag-floating-layer';
+    container.style.position = 'fixed';
+    container.style.top = '0';
+    container.style.left = '0';
+    container.style.width = '100vw';
+    container.style.height = '100vh';
+    container.style.pointerEvents = 'none';
+    container.style.zIndex = '-1'; 
+    container.style.overflow = 'hidden';
+    document.body.appendChild(container);
+
+    const floatingElements = [];
+    const numSwags = 18;
+    
+    for (let i = 0; i < numSwags; i++) {
+        const swagTemplate = swags[Math.floor(Math.random() * swags.length)];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        
+        const el = document.createElement('div');
+        el.style.position = 'absolute';
+        el.style.color = color;
+        const size = Math.random() * 50 + 30;
+        el.style.fontSize = size + 'px'; 
+        el.style.filter = "drop-shadow(0 0 10px " + color + ") opacity(0.3)";
+        el.style.display = 'flex';
+        el.style.flexDirection = 'column';
+        el.style.alignItems = 'center';
+        el.style.justifyContent = 'center';
+        el.style.transition = 'transform 0.1s ease-out';
+        
+        let htmlStr = '<i class="ph-fill ' + swagTemplate.icon + '"></i>';
+        if (swagTemplate.label) {
+            htmlStr += '<span style="font-size:0.25em; margin-top:5px; font-weight:900; font-family:sans-serif; letter-spacing:1px;">' + swagTemplate.label + '</span>';
+        }
+        el.innerHTML = htmlStr;
+        
+        const startX = Math.random() * 100;
+        const startY = Math.random() * 100;
+        el.style.left = startX + 'vw';
+        el.style.top = startY + 'vh';
+
+        const speedX = (Math.random() - 0.5) * 1.5; 
+        const speedY = (Math.random() - 0.5) * 1.5;
+        const rotationSpeed = (Math.random() - 0.5) * 0.5;
+
+        container.appendChild(el);
+        floatingElements.push({ el: el, speedX: speedX, speedY: speedY, rotationSpeed: rotationSpeed });
+    }
+
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        
+        for (let i = 0; i < floatingElements.length; i++) {
+            const item = floatingElements[i];
+            const moveX = scrollY * item.speedX;
+            const moveY = scrollY * item.speedY;
+            const rotate = scrollY * item.rotationSpeed;
+            
+            item.el.style.transform = "translate(" + moveX + "px, " + moveY + "px) rotate(" + rotate + "deg)";
+        }
+    });
+});
