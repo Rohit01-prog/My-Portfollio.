@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Maurya - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes scrollText {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Glowing Orbs -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <!-- Background Canvas for Scroll Animation -->
+    <canvas id="animation-canvas"></canvas>
+    
+    <!-- Dark overlay -->
+    <div class="bg-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo" style="display: flex; flex-direction: column; align-items: center; line-height: 1.2;">
+            <img src="logo_hands.png" alt="Logo" style="height: 30px; margin-bottom: 4px;">
+            <span style="font-size: 0.65rem; color: var(--primary);">▀▄▀▄▀ █☰ █▄ ◖ ⬤ █▚▞▌ █☰</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="active">HOME</a>
+            <a href="about.html">ABOUT & SKILLS</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="achievements.html">ACHIEVEMENTS</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        <a href="contact.html" class="btn btn-outline">LET'S TALK</a>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero section" style="min-height: 110vh;">
+            <div class="hero-left">
+                <p class="greeting"><span class="line"></span> HELLO, I'M</p>
+                <h1 class="hero-title">Rohit <span class="text-primary">Maurya</span></h1>
+                
+                <h2 class="hero-subtitle" style="font-size: 1.8rem; line-height: 1.4;">
+                    Full Stack Web Developer | Generative AI <br>
+                    <span class="text-primary" style="font-size: 1.5rem;">Computer Vision Enthusiast</span>
+                </h2>
+                
+                <p class="hero-desc">I build exceptional digital experiences with modern technologies. Passionate about clean code, scalable solutions, and turning ideas into reality.</p>
+                
+                <!-- Highlighted Seeking Internship -->
+                <div class="availability" style="margin-bottom: 2rem; margin-top: 1rem;">
+                    <div style="font-size: 1.3rem; color: #10b981; font-weight: 700; border: 2px solid rgba(16, 185, 129, 0.6); padding: 1.2rem 2rem; border-radius: 12px; display: inline-flex; align-items: center; background: rgba(16, 185, 129, 0.1); box-shadow: 0 0 25px rgba(16, 185, 129, 0.3); text-transform: uppercase; letter-spacing: 1px;">
+                        <span class="status-dot" style="width: 16px; height: 16px; margin-right: 15px; display: inline-block;"></span> 
+                        Seeking Internship & Ready to join AWS
+                    </div>
+                </div>
+
+                <div class="hero-actions" style="flex-wrap: wrap;">
+                    <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1rem;">HIRE ME <i class="ph ph-arrow-right"></i></a>
+                    <a href="projects.html" class="btn btn-outline" style="padding: 1rem 2rem; font-size: 1rem;">VIEW MY WORK <i class="ph ph-arrow-up-right"></i></a>
+                </div>
+                
+                <div style="margin-top: 1rem; margin-bottom: 2rem;">
+                    <a href="Rohit_Maurya_Resume.pdf" class="btn" style="padding: 1rem 2.5rem; font-size: 1.1rem; background: linear-gradient(45deg, #f59e0b, #f97316); color: #000; border-radius: 99px; box-shadow: 0 10px 25px rgba(245, 158, 11, 0.5); font-weight: 800; text-transform: uppercase;">DOWNLOAD MY RESUME <i class="ph ph-download-simple" style="font-size: 1.3rem;"></i></a>
+                </div>
+                
+                <div class="social-links" style="margin-top: 2rem; gap: 1.5rem;">
+                    <a href="https://github.com/Rohit01-prog" style="width: 55px; height: 55px; font-size: 2rem; background: #333; color: white; border-color: #333; box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: all 0.3s;"><i class="ph-fill ph-github-logo"></i></a>
+                    <a href="https://linkedin.com/in/rohit-maurya-3940b3397" style="width: 55px; height: 55px; font-size: 2rem; background: #0077b5; color: white; border-color: #0077b5; box-shadow: 0 5px 15px rgba(0, 119, 181, 0.3); transition: all 0.3s;"><i class="ph-fill ph-linkedin-logo"></i></a>
+                    <a href="mailto:rohil.bcastudent25.30916@cimage.in" style="width: 55px; height: 55px; font-size: 2rem; background: #ea4335; color: white; border-color: #ea4335; box-shadow: 0 5px 15px rgba(234, 67, 53, 0.3); transition: all 0.3s;"><i class="ph-fill ph-envelope-simple"></i></a>
+                </div>
+            </div>
+            
+            <div class="hero-right" style="display: flex; justify-content: flex-end; align-items: flex-start;">
+                <!-- Adjusted blazer image (Smaller and pushed right) -->
+                <div class="image-wrapper blazer-wrapper" style="width: 380px; height: 520px; transform: translate(70px, 50px); border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.8); border: 2px solid var(--primary);">
+                    <img src="rohit_portrait.jpg" alt="Rohit Maurya" class="hero-img">
+                    
+                    <div class="floating-badge badge-react"><i class="ph-fill ph-code text-cyan"></i> Full Stack</div>
+                    <div class="floating-badge badge-node"><i class="ph-fill ph-brain text-green"></i> Gen AI</div>
+                    <div class="floating-badge badge-ts"><i class="ph-fill ph-cloud text-orange"></i> AWS Ready</div>
+                    <div class="floating-badge badge-mongo"><i class="ph-fill ph-eye text-blue"></i> Computer Vision</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Infinite Scrolling Marquee -->
+        <section class="marquee-section" style="overflow: hidden; padding: 5rem 0; background: rgba(0,0,0,0.4); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); margin-top: 8rem;">
+            <div style="display: flex; white-space: nowrap; font-size: 5rem; font-weight: 900; color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.2); animation: scrollText 25s linear infinite;">
+                <span style="padding-right: 50px;"><span style="color: #f59e0b; -webkit-text-stroke: 0; text-shadow: 0 0 30px rgba(245, 158, 11, 0.6);">FULL STACK WEB DEVELOPMENT</span> <span class="text-primary">•</span> GENERATIVE AI <span class="text-primary">•</span> AWS CLOUD READY <span class="text-primary">•</span> COMPUTER VISION <span class="text-primary">•</span> </span>
+                <span style="padding-right: 50px;"><span style="color: #f59e0b; -webkit-text-stroke: 0; text-shadow: 0 0 30px rgba(245, 158, 11, 0.6);">FULL STACK WEB DEVELOPMENT</span> <span class="text-primary">•</span> GENERATIVE AI <span class="text-primary">•</span> AWS CLOUD READY <span class="text-primary">•</span> COMPUTER VISION <span class="text-primary">•</span> </span>
+            </div>
+        </section>
+
+        <!-- Core Focus Areas -->
+        <section class="focus-areas section" style="padding: 10rem 0;">
+            <div class="center-header mb-4">
+                <p class="section-subtitle" style="justify-content: center;">SPECIALIZATION</p>
+                <h2 class="section-title" style="font-size: 3.5rem;">My Professional Focus</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-top: 6rem;">
+                <!-- Card 1 -->
+                <div style="background: rgba(20,20,20,0.8); backdrop-filter: blur(10px); padding: 4rem 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); border-top: 1px solid var(--primary); text-align: center; transition: all 0.4s; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+                    <i class="ph-fill ph-brain text-primary" style="font-size: 5rem; margin-bottom: 2rem;"></i>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Generative AI</h3>
+                    <p class="text-muted" style="font-size: 1.1rem; line-height: 1.8;">Leveraging advanced LLMs (Mistral, Anthropic) and Prompt Engineering to build intelligent, context-aware applications that solve real-world problems.</p>
+                </div>
+                <!-- Card 2: Full Stack (Yellow/Orange) -->
+                <div style="background: rgba(20,20,20,0.8); backdrop-filter: blur(10px); padding: 4rem 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); border-top: 2px solid #eab308; text-align: center; transition: all 0.4s; box-shadow: 0 15px 50px rgba(234, 179, 8, 0.15);">
+                    <i class="ph-fill ph-code" style="font-size: 5rem; margin-bottom: 2rem; color: #eab308;"></i>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Full Stack Web</h3>
+                    <p class="text-muted" style="font-size: 1.1rem; line-height: 1.8;">Architecting robust, scalable web applications from responsive frontend interfaces to powerful, secure backend APIs and databases.</p>
+                </div>
+                <!-- Card 3 -->
+                <div style="background: rgba(20,20,20,0.8); backdrop-filter: blur(10px); padding: 4rem 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); border-top: 1px solid #f97316; text-align: center; transition: all 0.4s; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+                    <i class="ph-fill ph-cloud text-orange" style="font-size: 5rem; margin-bottom: 2rem;"></i>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">AWS Ready</h3>
+                    <p class="text-muted" style="font-size: 1.1rem; line-height: 1.8;">Passionate about cloud infrastructure. Actively preparing to join and contribute to the AWS ecosystem with cloud-native development practices.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Strip (Technologies I Use) -->
+        <section style="padding: 3rem 0; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.5); overflow: hidden; margin-top: 4rem;">
+            <div style="display: flex; gap: 5rem; justify-content: center; align-items: center; opacity: 0.6; flex-wrap: wrap;">
+                <span style="font-size: 1.5rem; font-weight: 800; letter-spacing: 2px;">POWERED BY:</span>
+                <i class="ph-fill ph-file-python" style="font-size: 2.5rem;"></i>
+                <i class="ph-fill ph-file-c" style="font-size: 2.5rem;"></i>
+                <i class="ph-fill ph-amazon-logo" style="font-size: 2.5rem;"></i>
+                <span style="font-size: 1.3rem; font-weight: bold; font-family: monospace;">OpenCV</span>
+                <span style="font-size: 1.3rem; font-weight: bold; font-family: monospace;">Mistral.AI</span>
+                <i class="ph-fill ph-database" style="font-size: 2.5rem;"></i>
+                <i class="ph-fill ph-github-logo" style="font-size: 2.5rem;"></i>
+            </div>
+        </section>
+
+        <!-- Developer Terminal Mockup -->
+        <section style="padding: 8rem 0; display: flex; flex-direction: column; align-items: center;">
+            <div class="center-header mb-4">
+                <p class="section-subtitle" style="justify-content: center;">UNDER THE HOOD</p>
+                <h2 class="section-title">Code That Scales</h2>
+            </div>
+            
+            <div class="terminal-window" style="width: 850px; max-width: 90%; background: #0f172a; border-radius: 12px; border: 1px solid #1e293b; box-shadow: 0 30px 60px rgba(0,0,0,0.8); overflow: hidden; margin-top: 3rem;">
+                <!-- Terminal Header -->
+                <div style="background: #1e293b; padding: 12px 20px; display: flex; gap: 8px; align-items: center; border-bottom: 1px solid #0f172a;">
+                    <div style="width: 14px; height: 14px; border-radius: 50%; background: #ef4444;"></div>
+                    <div style="width: 14px; height: 14px; border-radius: 50%; background: #eab308;"></div>
+                    <div style="width: 14px; height: 14px; border-radius: 50%; background: #22c55e;"></div>
+                    <span style="margin-left: 20px; color: #94a3b8; font-size: 0.9rem; font-family: monospace;">rohit@dev-environment: ~/portfolio/ai-engine</span>
+                </div>
+                <!-- Terminal Body -->
+                <div style="padding: 2.5rem; font-family: 'Courier New', Courier, monospace; font-size: 1.15rem; color: #a5b4fc; line-height: 1.8;">
+                    <p><span style="color: #22c55e; font-weight: bold;">rohit@dev-environment</span><span style="color: #e2e8f0;">:</span><span style="color: #3b82f6;">~$</span> python deploy_system.py</p>
+                    <p style="color: #cbd5e1; margin-top: 15px;">> Initializing core system modules...</p>
+                    <p style="color: #f59e0b; margin-top: 5px;">[WARN] High compute requested for real-time OpenCV stream.</p>
+                    <p style="color: #cbd5e1; margin-top: 5px;">> Loading Mistral AI LLM weights ...... <span style="color: #22c55e; font-weight: bold;">[SUCCESS]</span></p>
+                    <p style="color: #cbd5e1; margin-top: 5px;">> Hand Landmark tracking (MediaPipe) . <span style="color: #22c55e; font-weight: bold;">[ACTIVE]</span></p>
+                    <p style="color: #cbd5e1; margin-top: 5px;">> Compiling frontend assets and starting local server...</p>
+                    <p style="color: #cbd5e1; margin-top: 5px;">> Connecting to AWS Cloud infrastructure...</p>
+                    <p style="color: #38bdf8; margin-top: 20px; font-weight: bold;">System is online on port 8080. Ready to build the future. <span style="animation: blink 1s step-end infinite;">█</span></p>
+                </div>
+            </div>
+            <style>
+                @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+            </style>
+        </section>
+
+        <!-- Development Process -->
+        <section style="padding: 6rem 0 10rem 0;">
+            <div class="center-header mb-4">
+                <p class="section-subtitle" style="justify-content: center;">MY PROCESS</p>
+                <h2 class="section-title">From Concept to Reality</h2>
+            </div>
+            
+            <div style="display: flex; justify-content: center; gap: 3rem; max-width: 1100px; margin: 5rem auto 0 auto; flex-wrap: wrap; padding: 0 2rem;">
+                <!-- Step 1 -->
+                <div style="flex: 1; min-width: 280px; background: rgba(20,20,20,0.6); backdrop-filter: blur(5px); padding: 3rem 2.5rem; border-radius: 16px; border: 1px dashed rgba(255,255,255,0.15); position: relative;">
+                    <div style="width: 60px; height: 60px; background: var(--primary); color: #000; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.8rem; font-weight: 900; position: absolute; top: -30px; left: 3rem; box-shadow: 0 10px 20px rgba(245, 158, 11, 0.4);">1</div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; margin-top: 1rem; color: #fff;">Architecture & Logic</h3>
+                    <p class="text-muted" style="line-height: 1.7;">Designing robust algorithms, planning database schemas, and writing clean, scalable Python and backend logic.</p>
+                </div>
+                <!-- Step 2 -->
+                <div style="flex: 1; min-width: 280px; background: rgba(20,20,20,0.6); backdrop-filter: blur(5px); padding: 3rem 2.5rem; border-radius: 16px; border: 1px dashed rgba(255,255,255,0.15); position: relative;">
+                    <div style="width: 60px; height: 60px; background: #06b6d4; color: #000; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.8rem; font-weight: 900; position: absolute; top: -30px; left: 3rem; box-shadow: 0 10px 20px rgba(6, 182, 212, 0.4);">2</div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; margin-top: 1rem; color: #fff;">AI & Integration</h3>
+                    <p class="text-muted" style="line-height: 1.7;">Embedding intelligent models (LLMs, Computer Vision) into the core workflow via precise API integrations.</p>
+                </div>
+                <!-- Step 3 -->
+                <div style="flex: 1; min-width: 280px; background: rgba(20,20,20,0.6); backdrop-filter: blur(5px); padding: 3rem 2.5rem; border-radius: 16px; border: 1px dashed rgba(255,255,255,0.15); position: relative;">
+                    <div style="width: 60px; height: 60px; background: #10b981; color: #000; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.8rem; font-weight: 900; position: absolute; top: -30px; left: 3rem; box-shadow: 0 10px 20px rgba(16, 185, 129, 0.4);">3</div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; margin-top: 1rem; color: #fff;">Seamless UI & Deploy</h3>
+                    <p class="text-muted" style="line-height: 1.7;">Crafting pixel-perfect frontend experiences and preparing the entire tech stack for cloud deployment.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Orbiting Tech Ecosystem -->
+        <section style="padding: 8rem 0; text-align: center; overflow: hidden; position: relative;">
+            <div class="center-header mb-4">
+                <p class="section-subtitle" style="justify-content: center;">THE ECOSYSTEM</p>
+                <h2 class="section-title">My Tech Universe</h2>
+            </div>
+            
+            <div class="orbit-container" style="position: relative; width: 400px; height: 400px; margin: 6rem auto; display: flex; justify-content: center; align-items: center;">
+                <!-- Center Core -->
+                <div style="width: 130px; height: 130px; background: radial-gradient(circle, #f59e0b, #ea580c); border-radius: 50%; box-shadow: 0 0 60px rgba(245, 158, 11, 0.9); display: flex; align-items: center; justify-content: center; z-index: 10;">
+                    <i class="ph-fill ph-brain" style="font-size: 4.5rem; color: #fff;"></i>
+                </div>
+                
+                <!-- Orbit 1 (Inner) -->
+                <div style="position: absolute; width: 280px; height: 280px; border: 1px dashed rgba(255,255,255,0.2); border-radius: 50%; animation: spin 15s linear infinite;">
+                    <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); width: 45px; height: 45px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #38bdf8; box-shadow: 0 0 15px rgba(56,189,248,0.5);"><i class="ph-fill ph-file-python text-blue" style="animation: spin-reverse 15s linear infinite;"></i></div>
+                    <div style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); width: 45px; height: 45px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #22c55e; box-shadow: 0 0 15px rgba(34,197,94,0.5);"><i class="ph-fill ph-file-c text-green" style="animation: spin-reverse 15s linear infinite;"></i></div>
+                </div>
+                
+                <!-- Orbit 2 (Outer) -->
+                <div style="position: absolute; width: 450px; height: 450px; border: 1px dashed rgba(255,255,255,0.1); border-radius: 50%; animation: spin-reverse 25s linear infinite;">
+                    <div style="position: absolute; top: 50%; left: -25px; transform: translateY(-50%); width: 55px; height: 55px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #f59e0b; box-shadow: 0 0 15px rgba(245,158,11,0.5);"><i class="ph-fill ph-amazon-logo text-yellow" style="animation: spin 25s linear infinite;"></i></div>
+                    <div style="position: absolute; top: 50%; right: -25px; transform: translateY(-50%); width: 55px; height: 55px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #ef4444; box-shadow: 0 0 15px rgba(239,68,68,0.5);"><i class="ph-fill ph-database text-red" style="animation: spin 25s linear infinite;"></i></div>
+                    <div style="position: absolute; top: 10px; right: 15%; width: 55px; height: 55px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #8b5cf6; box-shadow: 0 0 15px rgba(139,92,246,0.5);"><i class="ph-fill ph-github-logo text-purple" style="animation: spin 25s linear infinite;"></i></div>
+                </div>
+            </div>
+            <style>
+                @keyframes spin { 100% { transform: rotate(360deg); } }
+                @keyframes spin-reverse { 100% { transform: rotate(-360deg); } }
+            </style>
+        </section>
+
+        <!-- IDE / VS Code Mockup Section -->
+        <section style="padding: 4rem 0 8rem 0; display: flex; justify-content: center;">
+            <div style="width: 900px; max-width: 95%; background: #1e1e1e; border-radius: 12px; border: 1px solid #333; box-shadow: 0 30px 60px rgba(0,0,0,0.8); overflow: hidden; text-align: left;">
+                <!-- IDE Header -->
+                <div style="background: #252526; padding: 12px 20px; display: flex; gap: 20px; align-items: center; border-bottom: 1px solid #111;">
+                    <div style="display: flex; gap: 8px;">
+                        <div style="width: 14px; height: 14px; border-radius: 50%; background: #ff5f56;"></div>
+                        <div style="width: 14px; height: 14px; border-radius: 50%; background: #ffbd2e;"></div>
+                        <div style="width: 14px; height: 14px; border-radius: 50%; background: #27c93f;"></div>
+                    </div>
+                    <div style="display: flex; gap: 25px; font-family: sans-serif; font-size: 0.9rem; color: #969696;">
+                        <span style="color: #fff; border-bottom: 2px solid #007acc; padding-bottom: 4px;">core_engine.py</span>
+                        <span style="cursor: pointer; padding-bottom: 4px;">aws_deploy.py</span>
+                        <span style="cursor: pointer; padding-bottom: 4px;">api_routes.py</span>
+                    </div>
+                </div>
+                <!-- IDE Body -->
+                <div style="display: flex; font-family: 'Consolas', 'Courier New', monospace; font-size: 1.1rem; line-height: 1.6; padding: 2rem;">
+                    <!-- Line numbers -->
+                    <div style="color: #858585; text-align: right; padding-right: 1.5rem; user-select: none; border-right: 1px solid #404040; margin-right: 1.5rem;">
+                        1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13
+                    </div>
+                    <!-- Code -->
+                    <div style="color: #d4d4d4; white-space: pre; overflow-x: auto;">
+<span style="color: #c586c0;">import</span> <span style="color: #4ec9b0;">cv2</span>
+<span style="color: #c586c0;">import</span> <span style="color: #4ec9b0;">mistralai</span>
+<span style="color: #c586c0;">from</span> aws_services <span style="color: #c586c0;">import</span> CloudDeploy
+
+<span style="color: #569cd6;">class</span> <span style="color: #4ec9b0;">VisionEngine</span>:
+    <span style="color: #569cd6;">def</span> <span style="color: #dcdcaa;">__init__</span>(<span style="color: #9cdcfe;">self</span>):
+        <span style="color: #9cdcfe;">self</span>.model = mistralai.load_model(<span style="color: #ce9178;">"latest-v2"</span>)
+        <span style="color: #9cdcfe;">self</span>.camera = cv2.VideoCapture(<span style="color: #b5cea8;">0</span>)
+        <span style="color: #6a9955;"># Ready for deployment</span>
+        
+    <span style="color: #569cd6;">def</span> <span style="color: #dcdcaa;">process_frame</span>(<span style="color: #9cdcfe;">self</span>, <span style="color: #9cdcfe;">frame</span>):
+        <span style="color: #6a9955;"># Analyze hand gestures in real-time</span>
+        <span style="color: #c586c0;">return</span> <span style="color: #9cdcfe;">self</span>.model.analyze(frame)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Metrics & Quote -->
+        <section style="padding: 6rem 0 8rem 0;">
+            <div style="max-width: 1100px; margin: 0 auto; padding: 4rem 3rem; background: rgba(10,10,10,0.8); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.05); border-radius: 30px; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+                
+                <h3 style="font-size: 2.2rem; margin-bottom: 4rem; font-weight: 800; letter-spacing: 2px;">DEVELOPMENT IMPACT</h3>
+                
+                <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 3rem;">
+                    <div>
+                        <div style="font-size: 4.5rem; font-weight: 900; color: #10b981; line-height: 1;">50<span style="font-size: 3rem;">k+</span></div>
+                        <div style="font-size: 1.2rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 2px; margin-top: 10px;">Lines of Code</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 4.5rem; font-weight: 900; color: #38bdf8; line-height: 1;">100<span style="font-size: 3rem;">%</span></div>
+                        <div style="font-size: 1.2rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 2px; margin-top: 10px;">Dedication</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 4.5rem; font-weight: 900; color: #f59e0b; line-height: 1;">5<span style="font-size: 3rem;">+</span></div>
+                        <div style="font-size: 1.2rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 2px; margin-top: 10px;">Major Projects</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 4.5rem; font-weight: 900; color: #8b5cf6; line-height: 1;">∞</div>
+                        <div style="font-size: 1.2rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 2px; margin-top: 10px;">Cups of Coffee</div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 6rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 5rem;">
+                    <i class="ph-fill ph-quotes text-primary" style="font-size: 4rem; margin-bottom: 1.5rem;"></i>
+                    <p style="font-size: 2.2rem; font-family: 'Caveat', cursive; color: #e2e8f0; max-width: 800px; margin: 0 auto; line-height: 1.5;">"Code is like poetry. When written elegantly, it has the power to solve the world's most complex problems and shape the future."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The "Superpowers" Grid (Features) -->
+        <section style="padding: 8rem 0; position: relative;">
+            <div class="center-header mb-4">
+                <p class="section-subtitle" style="justify-content: center;">CAPABILITIES</p>
+                <h2 class="section-title" style="font-size: 3rem;">My Developer Superpowers</h2>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 5rem auto 0; padding: 0 2rem;">
+                <!-- Card 1 -->
+                <div style="background: linear-gradient(145deg, #111 0%, #1a1a1a 100%); border-radius: 24px; padding: 3rem 2rem; border: 1px solid rgba(255,255,255,0.05); position: relative; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.6);">
+                    <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: #38bdf8; filter: blur(80px); opacity: 0.25;"></div>
+                    <i class="ph-fill ph-code-block" style="font-size: 3.5rem; color: #38bdf8; margin-bottom: 1.5rem;"></i>
+                    <h3 style="font-size: 1.6rem; margin-bottom: 1rem; color: #fff;">Clean Architecture</h3>
+                    <p class="text-muted" style="line-height: 1.7;">Writing highly maintainable, modular, and well-documented code that scales effortlessly across systems.</p>
+                </div>
+                <!-- Card 2 -->
+                <div style="background: linear-gradient(145deg, #111 0%, #1a1a1a 100%); border-radius: 24px; padding: 3rem 2rem; border: 1px solid rgba(255,255,255,0.05); position: relative; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.6);">
+                    <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: #10b981; filter: blur(80px); opacity: 0.25;"></div>
+                    <i class="ph-fill ph-cpu" style="font-size: 3.5rem; color: #10b981; margin-bottom: 1.5rem;"></i>
+                    <h3 style="font-size: 1.6rem; margin-bottom: 1rem; color: #fff;">Optimized Performance</h3>
+                    <p class="text-muted" style="line-height: 1.7;">Tuning algorithms and managing memory efficiently, crucial for high-speed real-time Computer Vision tasks.</p>
+                </div>
+                <!-- Card 3 -->
+                <div style="background: linear-gradient(145deg, #111 0%, #1a1a1a 100%); border-radius: 24px; padding: 3rem 2rem; border: 1px solid rgba(255,255,255,0.05); position: relative; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.6);">
+                    <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: #f59e0b; filter: blur(80px); opacity: 0.25;"></div>
+                    <i class="ph-fill ph-magic-wand" style="font-size: 3.5rem; color: #f59e0b; margin-bottom: 1.5rem;"></i>
+                    <h3 style="font-size: 1.6rem; margin-bottom: 1rem; color: #fff;">Prompt Engineering</h3>
+                    <p class="text-muted" style="line-height: 1.7;">Mastering context windows and crafting precise prompts to extract maximum reasoning value from LLMs.</p>
+                </div>
+                <!-- Card 4 -->
+                <div style="background: linear-gradient(145deg, #111 0%, #1a1a1a 100%); border-radius: 24px; padding: 3rem 2rem; border: 1px solid rgba(255,255,255,0.05); position: relative; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.6);">
+                    <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: #8b5cf6; filter: blur(80px); opacity: 0.25;"></div>
+                    <i class="ph-fill ph-shield-check" style="font-size: 3.5rem; color: #8b5cf6; margin-bottom: 1.5rem;"></i>
+                    <h3 style="font-size: 1.6rem; margin-bottom: 1rem; color: #fff;">Secure by Design</h3>
+                    <p class="text-muted" style="line-height: 1.7;">Implementing modern security protocols, API middleware, and best practices across full-stack applications.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Developer FAQ Section -->
+        <section style="padding: 6rem 0;">
+            <div style="max-width: 900px; margin: 0 auto; padding: 0 2rem;">
+                <div class="center-header mb-4">
+                    <p class="section-subtitle" style="justify-content: center;">QUICK ANSWERS</p>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+                
+                <div style="margin-top: 5rem; display: flex; flex-direction: column; gap: 2rem;">
+                    <!-- FAQ Item 1 -->
+                    <div style="background: rgba(20,20,20,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.05); border-left: 5px solid var(--primary); padding: 2.5rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                        <h4 style="font-size: 1.4rem; margin-bottom: 1rem; color: #fff;">Are you available for immediate internship opportunities?</h4>
+                        <p class="text-muted" style="line-height: 1.7; font-size: 1.1rem;">Yes! I am actively seeking software development and AI engineering internships where I can contribute to real-world projects and grow my skills within a fast-paced team environment.</p>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div style="background: rgba(20,20,20,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.05); border-left: 5px solid #06b6d4; padding: 2.5rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                        <h4 style="font-size: 1.4rem; margin-bottom: 1rem; color: #fff;">What is your primary tech stack?</h4>
+                        <p class="text-muted" style="line-height: 1.7; font-size: 1.1rem;">My core expertise lies in Python, C, and Java for backend and algorithms. I heavily use OpenCV and MediaPipe for Computer Vision, and Mistral AI for generative models. For the web, I utilize modern frameworks like Streamlit and build robust REST APIs.</p>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div style="background: rgba(20,20,20,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.05); border-left: 5px solid #f97316; padding: 2.5rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                        <h4 style="font-size: 1.4rem; margin-bottom: 1rem; color: #fff;">How do you approach a new AI project?</h4>
+                        <p class="text-muted" style="line-height: 1.7; font-size: 1.1rem;">I start by defining the core problem and data pipeline. Then, I design a clean architecture, integrate the appropriate models (via API or local weights), and build a seamless user interface around it while ensuring optimal performance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Giant Call to Action Block -->
+        <section style="padding: 8rem 0 4rem 0;">
+            <div style="max-width: 1100px; margin: 0 auto; background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(234, 88, 12, 0.05) 100%); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 40px; padding: 7rem 3rem; text-align: center; position: relative; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.6);">
+                <!-- Background decorative elements -->
+                <div style="position: absolute; top: -100px; left: -100px; width: 300px; height: 300px; background: var(--primary); filter: blur(120px); opacity: 0.4;"></div>
+                <div style="position: absolute; bottom: -100px; right: -100px; width: 300px; height: 300px; background: #ea580c; filter: blur(120px); opacity: 0.3;"></div>
+                
+                <h2 style="font-size: 4.5rem; font-weight: 900; margin-bottom: 2rem; color: #fff; line-height: 1.1; letter-spacing: -1px;">Ready to build the <br>next big thing?</h2>
+                <p style="font-size: 1.4rem; color: #cbd5e1; max-width: 700px; margin: 0 auto 3.5rem auto; line-height: 1.6;">Whether you need a robust full-stack application, an intelligent AI integration, or a cutting-edge computer vision system, I'm ready to bring your vision to life.</p>
+                
+                <a href="contact.html" class="btn" style="padding: 1.5rem 3.5rem; font-size: 1.2rem; background: #fff; color: #000; border-radius: 99px; font-weight: 800; box-shadow: 0 15px 40px rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 2px;">Start a Conversation <i class="ph-bold ph-arrow-right" style="margin-left: 15px;"></i></a>
+            </div>
+        </section>
+
+        <!-- Cinematic Visual Break -->
+        <section style="padding: 12rem 0; text-align: center; position: relative;">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 400px; background: var(--primary); filter: blur(200px); opacity: 0.2; z-index: -1; border-radius: 50%;"></div>
+            <h2 style="font-size: 6rem; font-weight: 900; line-height: 1.1; text-transform: uppercase; letter-spacing: -2px;">Building The <br><span style="color: transparent; -webkit-text-stroke: 2px var(--primary);">Future of Tech</span></h2>
+            <p style="font-size: 1.5rem; color: var(--text-muted); max-width: 800px; margin: 3rem auto;">Combining artificial intelligence with powerful full-stack technologies to create scalable, impactful solutions for the modern web and cloud.</p>
+        </section>
+
+        <!-- Clean & Small Footer -->
+        <footer class="footer" style="padding: 2rem 0; background: rgba(5,5,5,0.95); text-align: center; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 4rem;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+                
+                <!-- Quick Navigation Links -->
+                <ul style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; list-style: none; padding: 0;">
+                    <li><a href="about.html" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main);">About & Skills</a></li>
+                    <li><a href="projects.html" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main);">Projects</a></li>
+                    <li><a href="achievements.html" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main);">Achievements</a></li>
+                    <li><a href="contact.html" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main);">Contact Me</a></li>
+                </ul>
+
+                <!-- Small Social Icons -->
+                <div class="social-links" style="justify-content: center; gap: 1rem;">
+                    <a href="https://github.com/Rohit01-prog" style="width: 40px; height: 40px; font-size: 1.2rem; background: #333; color: white; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="ph-fill ph-github-logo"></i></a>
+                    <a href="https://linkedin.com/in/rohit-maurya-3940b3397" style="width: 40px; height: 40px; font-size: 1.2rem; background: #0077b5; color: white; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="ph-fill ph-linkedin-logo"></i></a>
+                    <a href="mailto:rohil.bcastudent25.30916@cimage.in" style="width: 40px; height: 40px; font-size: 1.2rem; background: #ea4335; color: white; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="ph-fill ph-envelope-simple"></i></a>
+                </div>
+
+                <!-- Copyright -->
+                <div style="font-size: 0.8rem; color: var(--text-muted);">
+                    <p>© 2026 Rohit Maurya. All rights reserved. | Engineered with passion <i class="ph-fill ph-heart text-primary"></i></p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Maurya - Achievements</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Glowing Orbs -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <!-- Background Canvas for Scroll Animation -->
+    <canvas id="animation-canvas"></canvas>
+    
+    <!-- Dark overlay -->
+    <div class="bg-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo" style="display: flex; flex-direction: column; align-items: center; line-height: 1.2;">
+            <img src="logo_hands.png" alt="Logo" style="height: 30px; margin-bottom: 4px;">
+            <span style="font-size: 0.65rem; color: var(--primary);">▀▄▀▄▀ █☰ █▄ ◖ ⬤ █▚▞▌ █☰</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT & SKILLS</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="achievements.html" class="active">ACHIEVEMENTS</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        <a href="contact.html" class="btn btn-outline">LET'S TALK</a>
+    </header>
+
+    <main class="main-content">
+        <!-- Trophy Room Hero -->
+        <section style="padding: 10rem 0 5rem 0; text-align: center; position: relative; overflow: hidden;">
+            <div style="position: absolute; top: -50px; left: 50%; transform: translateX(-50%); width: 800px; height: 400px; background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%); z-index: -1;"></div>
+            
+            <!-- Animated Trophy Icon -->
+            <div style="margin-bottom: 2rem; display: inline-block;">
+                <i class="ph-fill ph-trophy" style="font-size: 6rem; color: #f59e0b; filter: drop-shadow(0 0 20px rgba(245, 158, 11, 0.5)); animation: floatTrophy 3s ease-in-out infinite;"></i>
+            </div>
+            
+            <h1 style="font-size: 4.5rem; font-weight: 900; line-height: 1.1; margin-bottom: 2rem;">The <span style="color: #f59e0b;">Trophy</span> Room</h1>
+            <p style="font-size: 1.3rem; color: var(--text-muted); max-width: 600px; margin: 0 auto;">Milestones, certifications, and recognitions earned through dedication, competitive hackathons, and continuous learning.</p>
+            
+            <style>
+                @keyframes floatTrophy { 
+                    0%, 100% { transform: translateY(0) scale(1); } 
+                    50% { transform: translateY(-15px) scale(1.05); } 
+                }
+                @keyframes scrollText {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                }
+                @keyframes cardShine {
+                    0% { background-position: 200% center; }
+                    100% { background-position: -200% center; }
+                }
+            </style>
+        </section>
+
+        <!-- Animated Scrolling Marquee -->
+        <section style="background: #f59e0b; padding: 1rem 0; overflow: hidden; transform: rotate(-2deg) scale(1.05); box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4); z-index: 10; position: relative;">
+            <div style="display: flex; white-space: nowrap; font-size: 1.8rem; font-weight: 900; color: #000; animation: scrollText 20s linear infinite;">
+                <span style="padding-right: 50px;">🏆 1ST PRIZE WINNER 🏆 AWS CERTIFIED 🏆 CORE TEAM MEMBER 🏆 SWAG HUNTER 🏆 PROMPT ENGINEERING EXPERT 🏆</span>
+                <span style="padding-right: 50px;">🏆 1ST PRIZE WINNER 🏆 AWS CERTIFIED 🏆 CORE TEAM MEMBER 🏆 SWAG HUNTER 🏆 PROMPT ENGINEERING EXPERT 🏆</span>
+            </div>
+        </section>
+
+        <!-- 3D Animated Achievements Grid -->
+        <section id="achievements" style="padding: 8rem 0;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 5rem;">
+                
+                <!-- Card 1 -->
+                <div class="achievement-3d-card" style="perspective: 1000px;">
+                    <div style="background: rgba(20,20,20,0.8); border: 2px solid #f59e0b; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px rgba(245, 158, 11, 0.15); transition: transform 0.4s; position: relative;" onmouseover="this.style.transform='rotateY(10deg) rotateX(5deg) scale(1.05)';" onmouseout="this.style.transform='rotateY(0deg) rotateX(0deg) scale(1)';">
+                        <!-- Animated Shine Overlay -->
+                        <div style="position: absolute; inset: 0; background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.1) 50%, transparent 80%); background-size: 200% auto; animation: cardShine 3s infinite linear; z-index: 2; pointer-events: none;"></div>
+                        
+                        <div style="height: 250px; overflow: hidden; position: relative;">
+                            <img src="p2p_prize.jpg" alt="Prompt2Pixel First Prize" style="width: 100%; height: 100%; object-fit: cover; border-bottom: 2px solid #f59e0b; position: relative; z-index: 1;">
+                        </div>
+                        
+                        <div style="padding: 2.5rem; text-align: center; position: relative; z-index: 3;">
+                            <div style="width: 70px; height: 70px; background: #f59e0b; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: -60px auto 1.5rem auto; position: relative; box-shadow: 0 0 20px #f59e0b;">
+                                <i class="ph-fill ph-medal" style="font-size: 2.5rem; color: #000;"></i>
+                            </div>
+                            <h3 style="font-size: 1.6rem; margin-bottom: 1rem; color: #fff;">Prompt2Pixel 1st Prize</h3>
+                            <p class="text-muted" style="font-size: 1rem; line-height: 1.6;">Secured 1st position in the Prompt-to-Pixel Generative AI competition, demonstrating mastery in advanced prompt engineering and AI tool utilization.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="achievement-3d-card" style="perspective: 1000px;">
+                    <div style="background: rgba(20,20,20,0.8); border: 2px solid #38bdf8; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px rgba(56, 189, 248, 0.15); transition: transform 0.4s; position: relative;" onmouseover="this.style.transform='rotateY(-10deg) rotateX(5deg) scale(1.05)';" onmouseout="this.style.transform='rotateY(0deg) rotateX(0deg) scale(1)';">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.1) 50%, transparent 80%); background-size: 200% auto; animation: cardShine 3s infinite linear; z-index: 2; pointer-events: none; animation-delay: 1s;"></div>
+                        
+                        <div style="height: 250px; overflow: hidden; position: relative;">
+                            <img src="aws_ptp_cert.jpg" alt="AWS PTP Certificate" style="width: 100%; height: 100%; object-fit: cover; border-bottom: 2px solid #38bdf8; position: relative; z-index: 1;">
+                        </div>
+                        
+                        <div style="padding: 2.5rem; text-align: center; position: relative; z-index: 3;">
+                            <div style="width: 70px; height: 70px; background: #38bdf8; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: -60px auto 1.5rem auto; position: relative; box-shadow: 0 0 20px #38bdf8;">
+                                <i class="ph-fill ph-certificate" style="font-size: 2.5rem; color: #000;"></i>
+                            </div>
+                            <h3 style="font-size: 1.6rem; margin-bottom: 1rem; color: #fff;">AWS Certification</h3>
+                            <p class="text-muted" style="font-size: 1rem; line-height: 1.6;">Successfully achieved official AWS certification, proving proficiency in cloud architecture, deployments, and scalable infrastructure.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="achievement-3d-card" style="perspective: 1000px;">
+                    <div style="background: rgba(20,20,20,0.8); border: 2px solid #10b981; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px rgba(16, 185, 129, 0.15); transition: transform 0.4s; position: relative;" onmouseover="this.style.transform='rotateY(10deg) rotateX(5deg) scale(1.05)';" onmouseout="this.style.transform='rotateY(0deg) rotateX(0deg) scale(1)';">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.1) 50%, transparent 80%); background-size: 200% auto; animation: cardShine 3s infinite linear; z-index: 2; pointer-events: none; animation-delay: 2s;"></div>
+                        
+                        <div style="height: 250px; overflow: hidden; position: relative;">
+                            <img src="aws_swags.jpg" alt="AWS Swags Collected" style="width: 100%; height: 100%; object-fit: cover; border-bottom: 2px solid #10b981; position: relative; z-index: 1;">
+                        </div>
+                        
+                        <div style="padding: 2.5rem; text-align: center; position: relative; z-index: 3;">
+                            <div style="width: 70px; height: 70px; background: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: -60px auto 1.5rem auto; position: relative; box-shadow: 0 0 20px #10b981;">
+                                <i class="ph-fill ph-gift" style="font-size: 2.5rem; color: #000;"></i>
+                            </div>
+                            <h3 style="font-size: 1.6rem; margin-bottom: 1rem; color: #fff;">Community Recognition</h3>
+                            <p class="text-muted" style="font-size: 1rem; line-height: 1.6;">Received exclusive AWS swags as a token of appreciation for active community participation, leadership, and knowledge sharing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="achievement-3d-card" style="perspective: 1000px;">
+                    <div style="background: rgba(20,20,20,0.8); border: 2px solid #a855f7; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px rgba(168, 85, 247, 0.15); transition: transform 0.4s; position: relative;" onmouseover="this.style.transform='rotateY(-10deg) rotateX(5deg) scale(1.05)';" onmouseout="this.style.transform='rotateY(0deg) rotateX(0deg) scale(1)';">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.1) 50%, transparent 80%); background-size: 200% auto; animation: cardShine 3s infinite linear; z-index: 2; pointer-events: none; animation-delay: 0.5s;"></div>
+                        
+                        <div style="height: 250px; overflow: hidden; position: relative;">
+                            <img src="aws_core_team.jpg" alt="AWS Core Team Member" style="width: 100%; height: 100%; object-fit: cover; border-bottom: 2px solid #a855f7; position: relative; z-index: 1;">
+                        </div>
+                        
+                        <div style="padding: 2.5rem; text-align: center; position: relative; z-index: 3;">
+                            <div style="width: 70px; height: 70px; background: #a855f7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: -60px auto 1.5rem auto; position: relative; box-shadow: 0 0 20px #a855f7;">
+                                <i class="ph-fill ph-users-three" style="font-size: 2.5rem; color: #000;"></i>
+                            </div>
+                            <h3 style="font-size: 1.6rem; margin-bottom: 1rem; color: #fff;">Core Team Leadership</h3>
+                            <p class="text-muted" style="font-size: 1rem; line-height: 1.6;">Selected as a prominent member of the AWS Core Team, responsible for organizing events and driving innovative community initiatives.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. Global Impact Map (Animated CSS Map) -->
+        <section style="padding: 5rem 0;">
+            <div class="center-header mb-5">
+                <p class="section-subtitle" style="justify-content: center;">REACH</p>
+                <h2 class="section-title">Global Impact</h2>
+            </div>
+            <div style="max-width: 1000px; margin: 0 auto; padding: 2rem; background: #0f172a; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); position: relative; height: 400px; overflow: hidden;">
+                <!-- Dotted Map Background -->
+                <div style="position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.2) 2px, transparent 2px); background-size: 30px 30px; opacity: 0.5;"></div>
+                
+                <!-- Pulsing Location Markers -->
+                <div class="map-marker" style="top: 40%; left: 30%;">
+                    <div class="marker-dot"></div>
+                    <div class="marker-pulse"></div>
+                    <span class="marker-label">Hackathon (Remote)</span>
+                </div>
+                <div class="map-marker" style="top: 55%; left: 70%; animation-delay: 1s;">
+                    <div class="marker-dot" style="background: #10b981;"></div>
+                    <div class="marker-pulse" style="border-color: #10b981;"></div>
+                    <span class="marker-label">Patna, India</span>
+                </div>
+                <div class="map-marker" style="top: 30%; left: 50%; animation-delay: 2s;">
+                    <div class="marker-dot" style="background: #38bdf8;"></div>
+                    <div class="marker-pulse" style="border-color: #38bdf8;"></div>
+                    <span class="marker-label">AWS Summit</span>
+                </div>
+                
+                <!-- Animated Connection Lines -->
+                <svg style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;">
+                    <path d="M 300 160 Q 500 50 700 220" fill="transparent" stroke="rgba(245, 158, 11, 0.3)" stroke-width="2" stroke-dasharray="5 5" class="map-line"></path>
+                    <path d="M 700 220 Q 600 350 500 120" fill="transparent" stroke="rgba(16, 185, 129, 0.3)" stroke-width="2" stroke-dasharray="5 5" class="map-line-reverse"></path>
+                </svg>
+            </div>
+            
+            <style>
+                .map-marker { position: absolute; z-index: 10; display: flex; flex-direction: column; align-items: center; }
+                .marker-dot { width: 12px; height: 12px; background: #f59e0b; border-radius: 50%; position: relative; z-index: 2; box-shadow: 0 0 10px currentcolor; }
+                .marker-pulse { position: absolute; top: -14px; left: -14px; width: 40px; height: 40px; border: 2px solid #f59e0b; border-radius: 50%; animation: mapPulse 2s infinite; }
+                .marker-label { margin-top: 10px; background: rgba(0,0,0,0.8); padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; color: #fff; white-space: nowrap; opacity: 0; transform: translateY(10px); transition: all 0.3s; }
+                .map-marker:hover .marker-label { opacity: 1; transform: translateY(0); }
+                @keyframes mapPulse { 0% { transform: scale(0.5); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
+                .map-line { stroke-dashoffset: 100; animation: dashAnim 10s linear infinite; }
+                .map-line-reverse { stroke-dashoffset: 0; animation: dashAnimRev 10s linear infinite; }
+                @keyframes dashAnim { to { stroke-dashoffset: 0; } }
+                @keyframes dashAnimRev { to { stroke-dashoffset: 100; } }
+            </style>
+        </section>
+
+        <!-- 5. Hall of Fame (Testimonials) -->
+        <section style="padding: 5rem 0 10rem 0; overflow: hidden;">
+            <div class="center-header mb-5">
+                <p class="section-subtitle" style="justify-content: center;">RECOGNITION</p>
+                <h2 class="section-title">Hall of Fame</h2>
+            </div>
+            
+            <div style="display: flex; gap: 2rem; width: 200%; animation: scrollTestimonials 20s linear infinite;">
+                <!-- Testimonial 1 -->
+                <div style="background: rgba(20,20,20,0.6); border: 1px solid rgba(255,255,255,0.1); padding: 3rem; border-radius: 20px; min-width: 400px;">
+                    <i class="ph-fill ph-quotes" style="font-size: 3rem; color: rgba(255,255,255,0.1); margin-bottom: 1rem; display: block;"></i>
+                    <p style="font-size: 1.1rem; color: #e2e8f0; line-height: 1.6; margin-bottom: 2rem;">"An exceptional talent in bridging complex AI concepts with intuitive user interfaces. His work on Prompt2Pixel was outstanding."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: #333; border-radius: 50%;"></div>
+                        <div><h4 style="color: #fff;">Hackathon Judge</h4><p class="text-muted" style="font-size: 0.9rem;">Prompt2Pixel 2026</p></div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div style="background: rgba(20,20,20,0.6); border: 1px solid rgba(255,255,255,0.1); padding: 3rem; border-radius: 20px; min-width: 400px;">
+                    <i class="ph-fill ph-quotes" style="font-size: 3rem; color: rgba(255,255,255,0.1); margin-bottom: 1rem; display: block;"></i>
+                    <p style="font-size: 1.1rem; color: #e2e8f0; line-height: 1.6; margin-bottom: 2rem;">"Consistently delivers clean, scalable architecture. A natural leader within the AWS Core Team community."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: #333; border-radius: 50%;"></div>
+                        <div><h4 style="color: #fff;">Community Lead</h4><p class="text-muted" style="font-size: 0.9rem;">AWS Developers</p></div>
+                    </div>
+                </div>
+                <!-- Duplicate for infinite scroll -->
+                <div style="background: rgba(20,20,20,0.6); border: 1px solid rgba(255,255,255,0.1); padding: 3rem; border-radius: 20px; min-width: 400px;">
+                    <i class="ph-fill ph-quotes" style="font-size: 3rem; color: rgba(255,255,255,0.1); margin-bottom: 1rem; display: block;"></i>
+                    <p style="font-size: 1.1rem; color: #e2e8f0; line-height: 1.6; margin-bottom: 2rem;">"An exceptional talent in bridging complex AI concepts with intuitive user interfaces. His work on Prompt2Pixel was outstanding."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: #333; border-radius: 50%;"></div>
+                        <div><h4 style="color: #fff;">Hackathon Judge</h4><p class="text-muted" style="font-size: 0.9rem;">Prompt2Pixel 2026</p></div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                @keyframes scrollTestimonials { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+            </style>
+        </section>
+
+        <!-- 6. Hexagonal Skill Badges -->
+        <section style="padding: 5rem 0;">
+            <div class="center-header mb-5">
+                <p class="section-subtitle" style="justify-content: center;">EXPERTISE</p>
+                <h2 class="section-title">Verified Badges</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto; display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; padding: 0 2rem;">
+                <!-- Hex Badge 1 -->
+                <div class="hex-badge" style="animation-delay: 0.1s;">
+                    <div class="hex-inner">
+                        <i class="ph-fill ph-shield-check" style="color: #f59e0b; font-size: 2.5rem;"></i>
+                        <span style="font-size: 0.7rem; font-weight: bold; margin-top: 5px;">AWS<br>Core</span>
+                    </div>
+                </div>
+                <!-- Hex Badge 2 -->
+                <div class="hex-badge" style="animation-delay: 0.3s;">
+                    <div class="hex-inner">
+                        <i class="ph-fill ph-brain" style="color: #38bdf8; font-size: 2.5rem;"></i>
+                        <span style="font-size: 0.7rem; font-weight: bold; margin-top: 5px;">GenAI<br>Expert</span>
+                    </div>
+                </div>
+                <!-- Hex Badge 3 -->
+                <div class="hex-badge" style="animation-delay: 0.5s;">
+                    <div class="hex-inner">
+                        <i class="ph-fill ph-code" style="color: #10b981; font-size: 2.5rem;"></i>
+                        <span style="font-size: 0.7rem; font-weight: bold; margin-top: 5px;">Python<br>Master</span>
+                    </div>
+                </div>
+                <!-- Hex Badge 4 -->
+                <div class="hex-badge" style="animation-delay: 0.7s;">
+                    <div class="hex-inner">
+                        <i class="ph-fill ph-database" style="color: #a855f7; font-size: 2.5rem;"></i>
+                        <span style="font-size: 0.7rem; font-weight: bold; margin-top: 5px;">Data<br>Arch</span>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .hex-badge { width: 120px; height: 138px; background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05)); clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); display: flex; align-items: center; justify-content: center; position: relative; animation: floatHex 4s ease-in-out infinite; transition: transform 0.3s; cursor: pointer; }
+                .hex-badge:hover { transform: scale(1.1) translateY(-10px) !important; }
+                .hex-inner { width: 110px; height: 128px; background: #111; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; text-align: center; }
+                @keyframes floatHex { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+            </style>
+        </section>
+
+        <!-- 7. Speaking & Events Timeline -->
+        <section style="padding: 5rem 0 10rem 0;">
+            <div class="center-header mb-5">
+                <p class="section-subtitle" style="justify-content: center;">COMMUNITY</p>
+                <h2 class="section-title">Public Speaking & Events</h2>
+            </div>
+            <div style="max-width: 600px; margin: 0 auto; padding: 0 2rem; position: relative;">
+                <div style="position: absolute; top: 0; bottom: 0; left: 30px; width: 2px; background: rgba(255,255,255,0.1);"></div>
+                
+                <div style="position: relative; padding-left: 60px; margin-bottom: 3rem;">
+                    <div style="position: absolute; left: 24px; top: 0; width: 14px; height: 14px; border-radius: 50%; background: #38bdf8; box-shadow: 0 0 10px #38bdf8;"></div>
+                    <div style="color: #38bdf8; font-weight: bold; margin-bottom: 5px; font-family: monospace;">AUGUST 2026</div>
+                    <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 10px;">Guest Speaker: AI in Medicine</h3>
+                    <p class="text-muted">Delivered a talk on implementing GenAI for medical diagnosis at the regional Developer Fest.</p>
+                </div>
+                
+                <div style="position: relative; padding-left: 60px; margin-bottom: 3rem;">
+                    <div style="position: absolute; left: 24px; top: 0; width: 14px; height: 14px; border-radius: 50%; background: #10b981; box-shadow: 0 0 10px #10b981;"></div>
+                    <div style="color: #10b981; font-weight: bold; margin-bottom: 5px; font-family: monospace;">MARCH 2026</div>
+                    <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 10px;">AWS Workshop Lead</h3>
+                    <p class="text-muted">Conducted a hands-on workshop teaching 100+ students how to deploy serverless applications on AWS.</p>
+                </div>
+                
+                <div style="position: relative; padding-left: 60px;">
+                    <div style="position: absolute; left: 24px; top: 0; width: 14px; height: 14px; border-radius: 50%; background: #f59e0b; box-shadow: 0 0 10px #f59e0b; animation: pulseGlow 2s infinite alternate;"></div>
+                    <div style="color: #f59e0b; font-weight: bold; margin-bottom: 5px; font-family: monospace;">UPCOMING</div>
+                    <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 10px;">Global Hackathon Mentor</h3>
+                    <p class="text-muted">Invited to mentor teams building next-generation web architectures.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clean & Small Footer -->
+        <footer class="footer" style="padding: 2rem 0; background: rgba(5,5,5,0.95); text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+                <ul style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; list-style: none; padding: 0;">
+                    <li><a href="about.html" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main);">About & Skills</a></li>
+                    <li><a href="projects.html" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main);">Projects</a></li>
+                    <li><a href="achievements.html" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main);">Achievements</a></li>
+                    <li><a href="contact.html" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main);">Contact Me</a></li>
+                </ul>
+                <div class="social-links" style="justify-content: center; gap: 1rem;">
+                    <a href="https://github.com/Rohit01-prog" style="width: 40px; height: 40px; font-size: 1.2rem; background: #333; color: white; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="ph-fill ph-github-logo"></i></a>
+                    <a href="https://linkedin.com/in/rohit-maurya-3940b3397" style="width: 40px; height: 40px; font-size: 1.2rem; background: #0077b5; color: white; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="ph-fill ph-linkedin-logo"></i></a>
+                    <a href="mailto:rohil.bcastudent25.30916@cimage.in" style="width: 40px; height: 40px; font-size: 1.2rem; background: #ea4335; color: white; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="ph-fill ph-envelope-simple"></i></a>
+                </div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">
+                    <p>© 2026 Rohit Maurya. All rights reserved. | Engineered with passion <i class="ph-fill ph-heart text-primary"></i></p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

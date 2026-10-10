@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Maurya - Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <canvas id="animation-canvas"></canvas>
+    <div class="bg-overlay"></div>
+
+    <header class="navbar">
+        <div class="logo" style="display: flex; flex-direction: column; align-items: center; line-height: 1.2;">
+            <img src="logo_hands.png" alt="Logo" style="height: 30px; margin-bottom: 4px;">
+            <span style="font-size: 0.65rem; color: var(--primary);">▀▄▀▄▀ █☰ █▄ ◖ ⬤ █▚▞▌ █☰</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT & SKILLS</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="achievements.html">ACHIEVEMENTS</a>
+            <a href="contact.html" class="active">CONTACT</a>
+        </nav>
+        <a href="contact.html" class="btn btn-outline">LET'S TALK</a>
+    </header>
+
+    <main class="main-content">
+        <!-- 1. Contact Hero & Status -->
+        <section style="padding: 10rem 0 3rem 0; text-align: center; position: relative;">
+            <p class="section-subtitle" style="justify-content: center; color: #10b981; margin-bottom: 1rem; font-size: 1.2rem;">SECURE CHANNEL</p>
+            <h1 style="font-size: 4.5rem; font-weight: 900; line-height: 1.1; margin-bottom: 2rem;">Initiate <span style="color: #10b981;">Connection</span></h1>
+            
+            <div style="display: inline-flex; align-items: center; gap: 1rem; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 0.8rem 2rem; border-radius: 99px; margin-top: 1rem;">
+                <div style="position: relative; width: 12px; height: 12px;">
+                    <div style="position: absolute; inset: 0; background: #10b981; border-radius: 50%;"></div>
+                    <div style="position: absolute; inset: -4px; border: 2px solid #10b981; border-radius: 50%; animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;"></div>
+                </div>
+                <span style="color: #10b981; font-weight: bold; letter-spacing: 1px;">SYSTEM ONLINE • READY FOR INTERNSHIPS</span>
+            </div>
+            <style>
+                @keyframes ping { 75%, 100% { transform: scale(2); opacity: 0; } }
+            </style>
+        </section>
+
+        <!-- 2. Main Contact Split Interface (Hologram & Form) -->
+        <section style="padding: 4rem 0 4rem 0;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; flex-wrap: wrap; gap: 4rem; align-items: flex-start;">
+                
+                <!-- Holographic ID Card -->
+                <div style="flex: 1; min-width: 300px; display: flex; justify-content: center;">
+                    <div class="holo-card" style="width: 100%; max-width: 400px; background: rgba(10,10,15,0.9); border: 2px solid #10b981; border-radius: 20px; padding: 2rem; position: relative; overflow: hidden; box-shadow: 0 0 40px rgba(16, 185, 129, 0.2); transform: perspective(1000px) rotateY(15deg); transition: transform 0.5s;" onmouseover="this.style.transform='perspective(1000px) rotateY(0deg) scale(1.05)';" onmouseout="this.style.transform='perspective(1000px) rotateY(15deg) scale(1)';">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: rgba(16, 185, 129, 0.5); box-shadow: 0 0 20px #10b981; opacity: 0.8; animation: scanline 4s linear infinite; z-index: 10; pointer-events: none;"></div>
+                        
+                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(16,185,129,0.3); padding-bottom: 1rem; margin-bottom: 2rem;">
+                            <span style="color: #10b981; font-family: monospace; font-size: 0.9rem;">ID: RM-2026</span>
+                            <span style="color: #10b981; font-family: monospace; font-size: 0.9rem;">LEVEL: ADMIN</span>
+                        </div>
+
+                        <div style="text-align: center; margin-bottom: 2rem;">
+                            <div style="width: 120px; height: 120px; border-radius: 12px; border: 2px solid #10b981; margin: 0 auto 1rem; padding: 5px; position: relative;">
+                                <div style="position: absolute; inset: -2px; border: 1px solid #10b981; animation: glitchBorder 3s infinite;"></div>
+                                <img src="rohit_portrait.jpg" alt="Rohit Maurya" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; filter: contrast(1.2) sepia(0.2) hue-rotate(90deg);">
+                            </div>
+                            <h2 style="color: #fff; font-size: 1.8rem; letter-spacing: 2px; margin-bottom: 0.5rem; text-transform: uppercase;">Rohit Maurya</h2>
+                            <p style="color: #10b981; font-family: monospace; font-size: 1rem;">FULL STACK AI ENGINEER</p>
+                        </div>
+
+                        <div style="font-family: monospace; font-size: 0.9rem; color: #94a3b8; display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; border-top: 1px dashed rgba(16,185,129,0.3); padding-top: 1.5rem;">
+                            <div style="display: flex; align-items: center; gap: 12px; background: rgba(0,0,0,0.5); padding: 8px 12px; border-radius: 8px; border-left: 3px solid #10b981;">
+                                <i class="ph-fill ph-map-pin" style="color: #10b981; font-size: 1.2rem;"></i>
+                                <span style="color: #fff; letter-spacing: 1px;">PATNA, BIHAR, INDIA</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 12px; background: rgba(0,0,0,0.5); padding: 8px 12px; border-radius: 8px; border-left: 3px solid #f59e0b;">
+                                <i class="ph-fill ph-phone" style="color: #f59e0b; font-size: 1.2rem;"></i>
+                                <span style="color: #fff; letter-spacing: 1px;">+91-9461741758</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 12px; background: rgba(0,0,0,0.5); padding: 8px 12px; border-radius: 8px; border-left: 3px solid #38bdf8;">
+                                <i class="ph-fill ph-envelope-simple" style="color: #38bdf8; font-size: 1.2rem;"></i>
+                                <span style="color: #fff; font-size: 0.8rem; letter-spacing: 0.5px; word-break: break-all;">rohil.bcastudent25@cimage.in</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <style>
+                    @keyframes scanline { 0% { top: -10%; } 100% { top: 110%; } }
+                    @keyframes glitchBorder { 0%, 100% { clip-path: inset(0 0 0 0); } 20% { clip-path: inset(20% 0 80% 0); transform: translateX(-2px); } 40% { clip-path: inset(80% 0 10% 0); transform: translateX(2px); } }
+                </style>
+                
+                <!-- Cyber Form -->
+                <div style="flex: 1.5; min-width: 300px;">
+                    <form style="background: rgba(10,10,15,0.7); backdrop-filter: blur(10px); padding: 3rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); box-shadow: inset 0 0 30px rgba(0,0,0,0.5);">
+                        <h3 style="font-size: 2rem; color: #fff; margin-bottom: 2rem;">Transmit Data</h3>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                            <div class="input-group" style="position: relative;">
+                                <input type="text" placeholder="NAME // IDENTIFICATION" style="width: 100%; background: rgba(0,0,0,0.5); border: none; border-bottom: 2px solid #333; padding: 1rem; color: #fff; font-family: monospace; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderBottomColor='#10b981';" onblur="this.style.borderBottomColor='#333';">
+                            </div>
+                            <div class="input-group" style="position: relative;">
+                                <input type="email" placeholder="EMAIL // RETURN_ADDRESS" style="width: 100%; background: rgba(0,0,0,0.5); border: none; border-bottom: 2px solid #333; padding: 1rem; color: #fff; font-family: monospace; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderBottomColor='#10b981';" onblur="this.style.borderBottomColor='#333';">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group" style="margin-bottom: 2rem;">
+                            <input type="text" placeholder="SUBJECT // QUERY_TOPIC" style="width: 100%; background: rgba(0,0,0,0.5); border: none; border-bottom: 2px solid #333; padding: 1rem; color: #fff; font-family: monospace; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderBottomColor='#10b981';" onblur="this.style.borderBottomColor='#333';">
+                        </div>
+                        
+                        <div class="input-group" style="margin-bottom: 3rem;">
+                            <textarea placeholder="MESSAGE // DATA_PAYLOAD" rows="5" style="width: 100%; background: rgba(0,0,0,0.5); border: none; border-bottom: 2px solid #333; padding: 1rem; color: #fff; font-family: monospace; outline: none; resize: none; transition: border-color 0.3s;" onfocus="this.style.borderBottomColor='#10b981';" onblur="this.style.borderBottomColor='#333';"></textarea>
+                        </div>
+                        
+                        <button type="button" style="background: #10b981; color: #000; border: none; padding: 1.2rem 3rem; font-size: 1.1rem; font-weight: 800; font-family: monospace; text-transform: uppercase; cursor: pointer; border-radius: 4px; box-shadow: 0 0 20px rgba(16, 185, 129, 0.5); transition: all 0.3s; position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 10px;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 0 40px rgba(16, 185, 129, 0.8)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0 20px rgba(16, 185, 129, 0.5)';">
+                            <i class="ph-bold ph-paper-plane-tilt"></i> INITIALIZE UPLOAD
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Live SSH Terminal Connection -->
+        <section style="padding: 2rem 0;">
+            <div style="max-width: 800px; margin: 0 auto; padding: 0 2rem;">
+                <div style="background: #0f172a; border-radius: 12px; overflow: hidden; border: 1px solid #1e293b; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+                    <div style="background: #1e293b; padding: 10px 15px; display: flex; align-items: center; gap: 8px;">
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ef4444;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #f59e0b;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #10b981;"></div>
+                        <div style="flex: 1; text-align: center; color: #64748b; font-family: monospace; font-size: 0.8rem;">rohit@ai-server: ~</div>
+                    </div>
+                    <div style="padding: 2rem; font-family: monospace; color: #10b981; font-size: 1rem; line-height: 1.6; height: 250px; position: relative;">
+                        <div style="color: #64748b; margin-bottom: 1rem;">Last login: Just now on ttys001</div>
+                        <div class="typewriter-1" style="overflow: hidden; white-space: nowrap; margin-bottom: 0.5rem;">$ ssh connect@rohit-maurya.dev</div>
+                        <div class="typewriter-2" style="overflow: hidden; white-space: nowrap; margin-bottom: 0.5rem; opacity: 0; animation: fadeIn 0.1s forwards 2s;">Connecting to remote server...</div>
+                        <div class="typewriter-3" style="overflow: hidden; white-space: nowrap; margin-bottom: 0.5rem; opacity: 0; animation: fadeIn 0.1s forwards 3s;">Authenticating via SSH key... <span style="color: #38bdf8;">[SUCCESS]</span></div>
+                        <div class="typewriter-4" style="overflow: hidden; white-space: nowrap; margin-bottom: 1.5rem; opacity: 0; animation: fadeIn 0.1s forwards 4s;">Access granted.</div>
+                        <div class="typewriter-5" style="display: flex; opacity: 0; animation: fadeIn 0.1s forwards 5s;">
+                            <span style="color: #38bdf8; margin-right: 10px;">guest@rohit:~$</span> 
+                            <span style="border-right: 10px solid #10b981; animation: blinkCursor 1s step-end infinite;">ping available_for_work</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .typewriter-1 { animation: type1 2s steps(40, end); }
+                @keyframes type1 { from { width: 0; } to { width: 100%; } }
+                @keyframes fadeIn { to { opacity: 1; } }
+                @keyframes blinkCursor { 0%, 100% { border-color: transparent; } 50% { border-color: #10b981; } }
+            </style>
+        </section>
+
+        <!-- 4. Availability Clock -->
+        <section style="padding: 3rem 0;">
+            <div style="max-width: 800px; margin: 0 auto; display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap;">
+                <div style="text-align: center; background: rgba(255,255,255,0.05); padding: 2rem 4rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
+                    <i class="ph-fill ph-clock" style="font-size: 2.5rem; color: #38bdf8; margin-bottom: 1rem;"></i>
+                    <div style="font-family: monospace; font-size: 2rem; color: #fff; font-weight: bold; margin-bottom: 5px;">IST (UTC+5:30)</div>
+                    <div style="color: #94a3b8; font-size: 0.9rem;">Primary Working Timezone</div>
+                </div>
+                <div style="text-align: center; background: rgba(255,255,255,0.05); padding: 2rem 4rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
+                    <i class="ph-fill ph-calendar-check" style="font-size: 2.5rem; color: #10b981; margin-bottom: 1rem;"></i>
+                    <div style="font-family: monospace; font-size: 2rem; color: #fff; font-weight: bold; margin-bottom: 5px;">< 24 Hours</div>
+                    <div style="color: #94a3b8; font-size: 0.9rem;">Average Response Time</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Animated Orbital Network -->
+        <section style="padding: 5rem 0 10rem 0; text-align: center; overflow: hidden;">
+            <div class="center-header mb-5">
+                <p class="section-subtitle" style="justify-content: center;">COMMUNICATION NODES</p>
+                <h2 class="section-title">The Social Orbit</h2>
+            </div>
+            
+            <div style="position: relative; width: 400px; height: 400px; margin: 2rem auto; display: flex; align-items: center; justify-content: center;">
+                <div style="width: 80px; height: 80px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 10; box-shadow: 0 0 30px rgba(255,255,255,0.5);">
+                    <img src="logo_hands.png" style="width: 50px;">
+                </div>
+                
+                <div style="position: absolute; width: 200px; height: 200px; border: 1px dashed rgba(255,255,255,0.2); border-radius: 50%; animation: spinRight 10s linear infinite;">
+                    <a href="https://github.com/Rohit01-prog" style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); width: 40px; height: 40px; background: #333; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 0 15px rgba(255,255,255,0.5);"><i class="ph-fill ph-github-logo" style="animation: counterSpinRight 10s linear infinite;"></i></a>
+                </div>
+                
+                <div style="position: absolute; width: 320px; height: 320px; border: 1px dashed rgba(6, 182, 212, 0.3); border-radius: 50%; animation: spinLeft 15s linear infinite;">
+                    <a href="https://linkedin.com/in/rohit-maurya-3940b3397" style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); width: 40px; height: 40px; background: #0077b5; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 0 15px rgba(0, 119, 181, 0.5);"><i class="ph-fill ph-linkedin-logo" style="animation: counterSpinLeft 15s linear infinite;"></i></a>
+                </div>
+            </div>
+            
+            <style>
+                @keyframes spinRight { 100% { transform: rotate(360deg); } }
+                @keyframes counterSpinRight { 100% { transform: rotate(-360deg); } }
+                @keyframes spinLeft { 100% { transform: rotate(-360deg); } }
+                @keyframes counterSpinLeft { 100% { transform: rotate(360deg); } }
+            </style>
+        </section>
+
+        <!-- Clean Footer -->
+        <footer class="footer" style="padding: 2rem 0; background: rgba(5,5,5,0.95); text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+                <ul style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; list-style: none; padding: 0;">
+                    <li><a href="about.html" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main);">About & Skills</a></li>
+                    <li><a href="projects.html" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main);">Projects</a></li>
+                    <li><a href="achievements.html" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main);">Achievements</a></li>
+                    <li><a href="contact.html" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main);">Contact Me</a></li>
+                </ul>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">
+                    <p>© 2026 Rohit Maurya. All rights reserved. | Engineered with passion <i class="ph-fill ph-heart text-primary"></i></p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

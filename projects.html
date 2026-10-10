@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Maurya - Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Glowing Orbs -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <!-- Background Canvas for Scroll Animation -->
+    <canvas id="animation-canvas"></canvas>
+    
+    <!-- Dark overlay -->
+    <div class="bg-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo" style="display: flex; flex-direction: column; align-items: center; line-height: 1.2;">
+            <img src="logo_hands.png" alt="Logo" style="height: 30px; margin-bottom: 4px;">
+            <span style="font-size: 0.65rem; color: var(--primary);">▀▄▀▄▀ █☰ █▄ ◖ ⬤ █▚▞▌ █☰</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT & SKILLS</a>
+            <a href="projects.html" class="active">PROJECTS</a>
+            <a href="achievements.html">ACHIEVEMENTS</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        <a href="contact.html" class="btn btn-outline">LET'S TALK</a>
+    </header>
+
+    <main class="main-content">
+        <!-- Projects Hero -->
+        <section style="padding: 10rem 0 5rem 0; text-align: center; position: relative;">
+            <div style="position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); width: 600px; height: 300px; background: var(--primary); filter: blur(200px); opacity: 0.15; z-index: -1;"></div>
+            <p class="section-subtitle" style="justify-content: center; margin-bottom: 1rem; font-size: 1.2rem;">THE WORKSHOP</p>
+            <h1 style="font-size: 4.5rem; font-weight: 900; line-height: 1.1; margin-bottom: 2rem;">Where Ideas Compile <br>Into <span style="color: var(--primary);">Reality</span></h1>
+            <p style="font-size: 1.3rem; color: var(--text-muted); max-width: 700px; margin: 0 auto;">A showcase of my technical explorations across various domains: from distributed microservices and reactive frontends to advanced machine learning models and physics simulations.</p>
+        </section>
+
+        <!-- The Portfolio Grid -->
+        <section style="padding: 4rem 0 8rem 0;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem;">
+                
+                <!-- Project 1 -->
+                <div style="background: rgba(20,20,20,0.8); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.6); transition: transform 0.4s; display: flex; flex-direction: column;">
+                    <div style="height: 250px; overflow: hidden; position: relative;">
+                        <img src="gesture_simulator.jpg" alt="Gesture Vehicle Simulator" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;">
+                    </div>
+                    <div style="padding: 2.5rem; flex: 1; display: flex; flex-direction: column;">
+                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: #fff;">Physics Engine Simulator</h3>
+                        <p class="text-muted" style="line-height: 1.6; margin-bottom: 2rem; flex: 1;">A real-time 3D simulation environment built from scratch, mapping complex physical gestures to virtual kinematics with extreme low-latency processing.</p>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 2rem;">
+                            <span style="background: rgba(255,255,255,0.1); padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; color: #38bdf8;">C++</span>
+                            <span style="background: rgba(255,255,255,0.1); padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; color: #f59e0b;">OpenGL</span>
+                            <span style="background: rgba(255,255,255,0.1); padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; color: #10b981;">Mathematics</span>
+                        </div>
+                        <a href="#" class="btn" style="text-align: center; width: 100%; background: transparent; border: 1px solid var(--primary); color: var(--primary);">View Architecture <i class="ph-bold ph-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div style="background: rgba(20,20,20,0.8); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.6); transition: transform 0.4s; display: flex; flex-direction: column;">
+                    <div style="height: 250px; overflow: hidden; position: relative;">
+                        <img src="mediscan.jpg" alt="Dr. MediScan" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;">
+                    </div>
+                    <div style="padding: 2.5rem; flex: 1; display: flex; flex-direction: column;">
+                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: #fff;">Dr. MediScan Assistant</h3>
+                        <p class="text-muted" style="line-height: 1.6; margin-bottom: 2rem; flex: 1;">A secure, HIPAA-compliant diagnostic tool analyzing medical data. Implements asynchronous API calls and an isolated microservice architecture.</p>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 2rem;">
+                            <span style="background: rgba(255,255,255,0.1); padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; color: #38bdf8;">Python</span>
+                            <span style="background: rgba(255,255,255,0.1); padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; color: #f59e0b;">FastAPI</span>
+                            <span style="background: rgba(255,255,255,0.1); padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; color: #10b981;">TensorFlow</span>
+                        </div>
+                        <a href="#" class="btn" style="text-align: center; width: 100%; background: transparent; border: 1px solid var(--primary); color: var(--primary);">View Case Study <i class="ph-bold ph-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div style="background: rgba(20,20,20,0.8); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.6); transition: transform 0.4s; display: flex; flex-direction: column;">
+                    <div style="height: 250px; overflow: hidden; position: relative; background: #111; display: flex; align-items: center; justify-content: center;">
+                        <!-- Using Web Design.jpg or a placeholder, adding an icon to represent Travel/Taxi -->
+                        <div style="position: absolute; inset: 0; background: url('Web Design.jpg') center/cover; opacity: 0.5;"></div>
+                        <i class="ph-fill ph-taxi" style="font-size: 5rem; color: #f59e0b; position: relative; z-index: 2;"></i>
+                    </div>
+                    <div style="padding: 2.5rem; flex: 1; display: flex; flex-direction: column;">
+                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: #fff;">Travel Distance Fare Calculator</h3>
+                        <p class="text-muted" style="line-height: 1.6; margin-bottom: 2rem; flex: 1;">An intuitive web application that calculates accurate travel fares. Simply input the total kilometers traveled by taxi, car, or bus, and instantly get the estimated journey cost.</p>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 2rem;">
+                            <span style="background: rgba(255,255,255,0.1); padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; color: #38bdf8;">React</span>
+                            <span style="background: rgba(255,255,255,0.1); padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; color: #f59e0b;">Google Maps API</span>
+                            <span style="background: rgba(255,255,255,0.1); padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; color: #10b981;">Node.js</span>
+                        </div>
+                        <a href="#" class="btn" style="text-align: center; width: 100%; background: transparent; border: 1px solid var(--primary); color: var(--primary);">View Fare App <i class="ph-bold ph-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div style="background: rgba(20,20,20,0.8); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.6); transition: transform 0.4s; display: flex; flex-direction: column;">
+                    <div style="height: 250px; overflow: hidden; position: relative;">
+                        <img src="cityfixbihar.jpg" alt="City Fix Bihar" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;">
+                    </div>
+                    <div style="padding: 2.5rem; flex: 1; display: flex; flex-direction: column;">
+                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: #fff;">City Fix Initiative</h3>
+                        <p class="text-muted" style="line-height: 1.6; margin-bottom: 2rem; flex: 1;">A modern progressive web app (PWA) facilitating civic engagement. Utilizes Server-Side Rendering (SSR) for blazing fast load times and SEO.</p>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 2rem;">
+                            <span style="background: rgba(255,255,255,0.1); padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; color: #38bdf8;">React/Next.js</span>
+                            <span style="background: rgba(255,255,255,0.1); padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; color: #f59e0b;">Tailwind</span>
+                            <span style="background: rgba(255,255,255,0.1); padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; color: #8b5cf6;">PostgreSQL</span>
+                        </div>
+                        <a href="#" class="btn" style="text-align: center; width: 100%; background: transparent; border: 1px solid var(--primary); color: var(--primary);">Live Demo <i class="ph-bold ph-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Engineering Standards Section -->
+        <section style="padding: 6rem 0; background: rgba(0,0,0,0.4); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <div class="center-header mb-5">
+                <p class="section-subtitle" style="justify-content: center;">THE METHODOLOGY</p>
+                <h2 class="section-title">Engineering Standards</h2>
+            </div>
+            
+            <div style="max-width: 1100px; margin: 4rem auto 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 0 2rem;">
+                <div style="background: rgba(20,20,20,0.5); padding: 2.5rem; border-radius: 12px; border-left: 4px solid #38bdf8;">
+                    <i class="ph-fill ph-git-commit" style="font-size: 3rem; color: #38bdf8; margin-bottom: 1rem;"></i>
+                    <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 1rem;">Version Control & CI/CD</h3>
+                    <p class="text-muted" style="line-height: 1.6; font-size: 0.95rem;">Rigorous branching strategies (GitFlow) combined with automated testing and deployment pipelines to ensure zero-downtime releases.</p>
+                </div>
+                <div style="background: rgba(20,20,20,0.5); padding: 2.5rem; border-radius: 12px; border-left: 4px solid #10b981;">
+                    <i class="ph-fill ph-check-circle" style="font-size: 3rem; color: #10b981; margin-bottom: 1rem;"></i>
+                    <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 1rem;">Test-Driven Development</h3>
+                    <p class="text-muted" style="line-height: 1.6; font-size: 0.95rem;">Writing unit, integration, and end-to-end tests first. High code coverage guarantees reliability before code ever hits production.</p>
+                </div>
+                <div style="background: rgba(20,20,20,0.5); padding: 2.5rem; border-radius: 12px; border-left: 4px solid #f59e0b;">
+                    <i class="ph-fill ph-brackets-curly" style="font-size: 3rem; color: #f59e0b; margin-bottom: 1rem;"></i>
+                    <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 1rem;">Clean Code & SOLID</h3>
+                    <p class="text-muted" style="line-height: 1.6; font-size: 0.95rem;">Adhering strictly to DRY principles and SOLID design patterns. Code is written not just for machines, but for human maintainability.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Architecture Blueprint with Animations -->
+        <section style="padding: 10rem 0;">
+            <div class="center-header mb-5">
+                <p class="section-subtitle" style="justify-content: center;">SCALABILITY</p>
+                <h2 class="section-title">System Architecture Blueprint</h2>
+            </div>
+            
+            <style>
+                @keyframes dataFlowDown {
+                    0% { transform: translateY(0); opacity: 0; }
+                    20% { opacity: 1; }
+                    80% { opacity: 1; }
+                    100% { transform: translateY(30px); opacity: 0; }
+                }
+                @keyframes dataFlowUp {
+                    0% { transform: translateY(30px); opacity: 0; }
+                    20% { opacity: 1; }
+                    80% { opacity: 1; }
+                    100% { transform: translateY(0); opacity: 0; }
+                }
+                .data-dot {
+                    width: 8px; height: 8px; background: #fff; border-radius: 50%; position: absolute; left: 50%; margin-left: -4px; z-index: 10;
+                }
+                .dot-blue { background: #38bdf8; box-shadow: 0 0 10px #38bdf8; animation: dataFlowDown 1.5s infinite; }
+                .dot-yellow { background: #f59e0b; box-shadow: 0 0 10px #f59e0b; animation: dataFlowDown 2s infinite 0.5s; }
+                .dot-green { background: #10b981; box-shadow: 0 0 10px #10b981; animation: dataFlowUp 1.8s infinite 0.2s; }
+                .dot-red { background: #ef4444; box-shadow: 0 0 10px #ef4444; animation: dataFlowDown 1.2s infinite; }
+                
+                .blueprint-pulse { animation: blueprintPulse 3s infinite alternate; }
+                @keyframes blueprintPulse { 0% { box-shadow: 0 30px 60px rgba(0,0,0,0.7); } 100% { box-shadow: 0 30px 80px rgba(56, 189, 248, 0.15); } }
+            </style>
+
+            <div class="blueprint-pulse" style="max-width: 900px; margin: 4rem auto 0; padding: 4rem; background: #0f172a; border-radius: 20px; border: 1px solid #1e293b; text-align: center; position: relative; overflow: hidden;">
+                <!-- Decorative grid background -->
+                <div style="position: absolute; inset: 0; background-image: radial-gradient(#334155 1px, transparent 1px); background-size: 20px 20px; opacity: 0.3;"></div>
+                
+                <div style="position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+                    <!-- Client -->
+                    <div style="background: #1e293b; border: 2px solid #38bdf8; padding: 1rem 3rem; border-radius: 8px; font-weight: bold; color: #e2e8f0;">Web / Mobile Client</div>
+                    <div style="position: relative; width: 2px; height: 30px; background: rgba(56,189,248,0.3);">
+                        <div class="data-dot dot-blue"></div>
+                    </div>
+                    
+                    <!-- Gateway -->
+                    <div style="background: #1e293b; border: 2px dashed #f59e0b; padding: 1rem 4rem; border-radius: 8px; font-weight: bold; color: #e2e8f0;">API Gateway & Load Balancer</div>
+                    
+                    <div style="display: flex; gap: 4rem; margin-top: 2rem;">
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                            <div style="position: relative; width: 2px; height: 40px; background: rgba(245,158,11,0.3);"><div class="data-dot dot-yellow"></div></div>
+                            <div style="background: #1e293b; border: 2px solid #10b981; padding: 1rem 2rem; border-radius: 8px; font-weight: bold; color: #e2e8f0;">Auth Service</div>
+                            <div style="position: relative; width: 2px; height: 30px; background: rgba(16,185,129,0.3);"><div class="data-dot dot-green"></div></div>
+                            <i class="ph-fill ph-shield-check" style="font-size: 3rem; color: #10b981;"></i>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                            <div style="position: relative; width: 2px; height: 40px; background: rgba(245,158,11,0.3);"><div class="data-dot dot-yellow" style="animation-delay: 0.8s;"></div></div>
+                            <div style="background: #1e293b; border: 2px solid #8b5cf6; padding: 1rem 2rem; border-radius: 8px; font-weight: bold; color: #e2e8f0;">Data Processing</div>
+                            <div style="position: relative; width: 2px; height: 30px; background: rgba(139,92,246,0.3);"><div class="data-dot dot-green" style="animation-delay: 0.4s;"></div></div>
+                            <i class="ph-fill ph-database" style="font-size: 3rem; color: #8b5cf6;"></i>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                            <div style="position: relative; width: 2px; height: 40px; background: rgba(245,158,11,0.3);"><div class="data-dot dot-red"></div></div>
+                            <div style="background: #1e293b; border: 2px solid #ef4444; padding: 1rem 2rem; border-radius: 8px; font-weight: bold; color: #e2e8f0;">AI Engine</div>
+                            <div style="position: relative; width: 2px; height: 30px; background: rgba(239,68,68,0.3);"><div class="data-dot dot-red" style="animation-delay: 0.6s;"></div></div>
+                            <i class="ph-fill ph-cpu" style="font-size: 3rem; color: #ef4444;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. The Commit Matrix (GitHub Heatmap Style) -->
+        <section style="padding: 5rem 0;">
+            <div class="center-header mb-5">
+                <p class="section-subtitle" style="justify-content: center;">CONSISTENCY</p>
+                <h2 class="section-title">The Commit Matrix</h2>
+            </div>
+            <div style="max-width: 900px; margin: 0 auto; overflow-x: auto; padding: 2rem; background: rgba(10,10,10,0.6); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+                <div class="matrix-grid" style="display: grid; grid-template-columns: repeat(40, 1fr); gap: 4px; min-width: 800px;">
+                    <!-- Auto generated 280 squares in CSS/HTML logic -->
+                    <script>
+                        document.write(Array.from({length: 280}).map(() => {
+                            const intensity = Math.random();
+                            let colorClass = 'matrix-empty';
+                            if (intensity > 0.9) colorClass = 'matrix-high';
+                            else if (intensity > 0.7) colorClass = 'matrix-med';
+                            else if (intensity > 0.4) colorClass = 'matrix-low';
+                            return `<div class="matrix-cell ${colorClass}" style="animation-delay: ${Math.random()*2}s"></div>`;
+                        }).join(''));
+                    </script>
+                </div>
+                <div style="display: flex; justify-content: flex-end; align-items: center; gap: 8px; margin-top: 1rem; font-size: 0.8rem; color: #64748b;">
+                    Less <div class="matrix-cell matrix-empty"></div><div class="matrix-cell matrix-low"></div><div class="matrix-cell matrix-med"></div><div class="matrix-cell matrix-high"></div> More
+                </div>
+            </div>
+            <style>
+                .matrix-cell { width: 14px; height: 14px; border-radius: 2px; }
+                .matrix-empty { background: #1e293b; }
+                .matrix-low { background: #064e3b; animation: pulseCell 4s infinite alternate; }
+                .matrix-med { background: #059669; animation: pulseCell 3s infinite alternate; }
+                .matrix-high { background: #10b981; box-shadow: 0 0 8px #10b981; animation: pulseCell 2s infinite alternate; }
+                @keyframes pulseCell { 0% { opacity: 0.7; } 100% { opacity: 1; } }
+            </style>
+        </section>
+
+        <!-- 2. Animated Code Refactor Visualizer -->
+        <section style="padding: 5rem 0;">
+            <div class="center-header mb-5">
+                <p class="section-subtitle" style="justify-content: center;">OPTIMIZATION</p>
+                <h2 class="section-title">Before & After Refactor</h2>
+            </div>
+            <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 2rem; padding: 0 2rem;">
+                <div style="flex: 1; min-width: 300px; background: #0f172a; border-radius: 12px; border-top: 4px solid #ef4444; overflow: hidden; font-family: monospace; position: relative;">
+                    <div style="background: rgba(255,255,255,0.05); padding: 10px; font-weight: bold; color: #ef4444;">❌ Inefficient Query (O(N^2))</div>
+                    <div style="padding: 2rem; color: #94a3b8; font-size: 0.9rem; line-height: 1.5; white-space: pre-wrap;">
+def process_data(items):
+    <span style="color: #ef4444; background: rgba(239,68,68,0.1);">results = []</span>
+    <span style="color: #ef4444; background: rgba(239,68,68,0.1);">for item in items:</span>
+    <span style="color: #ef4444; background: rgba(239,68,68,0.1);">    for match in get_all():</span>
+    <span style="color: #ef4444; background: rgba(239,68,68,0.1);">        if item.id == match.id:</span>
+    <span style="color: #ef4444; background: rgba(239,68,68,0.1);">            results.append(match)</span>
+    return results
+                    </div>
+                </div>
+                
+                <div style="flex: 1; min-width: 300px; background: #0f172a; border-radius: 12px; border-top: 4px solid #10b981; overflow: hidden; font-family: monospace; position: relative; box-shadow: 0 0 30px rgba(16,185,129,0.15);">
+                    <div style="background: rgba(255,255,255,0.05); padding: 10px; font-weight: bold; color: #10b981;">✅ Optimized Hash Map (O(N))</div>
+                    <div style="padding: 2rem; color: #94a3b8; font-size: 0.9rem; line-height: 1.5; white-space: pre-wrap; position: relative;">
+def process_data(items):
+    <span style="color: #10b981; font-weight: bold;">match_dict = {m.id: m for m in get_all()}</span>
+    <span style="color: #10b981; font-weight: bold;">return [match_dict[i.id] for i in items]</span>
+                    
+                        <!-- Scanning line effect over the good code -->
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: #10b981; box-shadow: 0 0 10px #10b981; animation: scanCode 3s linear infinite;"></div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                @keyframes scanCode { 0% { top: 30px; opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { top: 90%; opacity: 0; } }
+            </style>
+        </section>
+
+        <!-- 3. Live Metrics Counter -->
+        <section style="padding: 5rem 0 10rem 0;">
+            <div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 3rem; text-align: center;">
+                <div>
+                    <i class="ph-fill ph-terminal-window" style="font-size: 3rem; color: #38bdf8; margin-bottom: 1rem;"></i>
+                    <h3 style="font-size: 3.5rem; font-weight: 900; color: #fff; line-height: 1;"><span class="counter-up">42</span>K+</h3>
+                    <p class="text-muted" style="letter-spacing: 2px; font-size: 0.9rem; text-transform: uppercase;">Lines of Code</p>
+                </div>
+                <div>
+                    <i class="ph-fill ph-git-merge" style="font-size: 3rem; color: #f59e0b; margin-bottom: 1rem;"></i>
+                    <h3 style="font-size: 3.5rem; font-weight: 900; color: #fff; line-height: 1;"><span class="counter-up">150</span>+</h3>
+                    <p class="text-muted" style="letter-spacing: 2px; font-size: 0.9rem; text-transform: uppercase;">Pull Requests</p>
+                </div>
+                <div>
+                    <i class="ph-fill ph-bug-beat" style="font-size: 3rem; color: #ef4444; margin-bottom: 1rem;"></i>
+                    <h3 style="font-size: 3.5rem; font-weight: 900; color: #fff; line-height: 1;"><span class="counter-up">312</span></h3>
+                    <p class="text-muted" style="letter-spacing: 2px; font-size: 0.9rem; text-transform: uppercase;">Bugs Squashed</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Technology Radar Animation -->
+        <section style="padding: 5rem 0;">
+            <div class="center-header mb-5">
+                <p class="section-subtitle" style="justify-content: center;">LANDSCAPE</p>
+                <h2 class="section-title">The Tech Radar</h2>
+            </div>
+            <div style="width: 350px; height: 350px; margin: 0 auto; border-radius: 50%; border: 2px solid rgba(16, 185, 129, 0.5); position: relative; overflow: hidden; background: rgba(16, 185, 129, 0.05); box-shadow: 0 0 50px rgba(16, 185, 129, 0.1);">
+                <!-- Crosshairs -->
+                <div style="position: absolute; top: 50%; left: 0; width: 100%; height: 1px; background: rgba(16, 185, 129, 0.3);"></div>
+                <div style="position: absolute; top: 0; left: 50%; width: 1px; height: 100%; background: rgba(16, 185, 129, 0.3);"></div>
+                <!-- Concentric circles -->
+                <div style="position: absolute; top: 10%; left: 10%; width: 80%; height: 80%; border-radius: 50%; border: 1px dashed rgba(16, 185, 129, 0.3);"></div>
+                <div style="position: absolute; top: 25%; left: 25%; width: 50%; height: 50%; border-radius: 50%; border: 1px dashed rgba(16, 185, 129, 0.3);"></div>
+                <!-- Sweeper -->
+                <div style="position: absolute; top: 50%; left: 50%; width: 50%; height: 50%; background: conic-gradient(rgba(16, 185, 129, 0.8) 0deg, transparent 45deg); transform-origin: 0 0; animation: radarSweep 4s linear infinite;"></div>
+                
+                <!-- Blips -->
+                <div class="radar-blip" style="top: 30%; left: 40%; animation-delay: 1s;"><span class="blip-label">Python</span></div>
+                <div class="radar-blip" style="top: 70%; left: 60%; animation-delay: 3s;"><span class="blip-label">AWS</span></div>
+                <div class="radar-blip" style="top: 40%; left: 70%; animation-delay: 2.5s;"><span class="blip-label">React</span></div>
+                <div class="radar-blip" style="top: 60%; left: 20%; animation-delay: 2s;"><span class="blip-label">Docker</span></div>
+            </div>
+            <style>
+                @keyframes radarSweep { 100% { transform: rotate(360deg); } }
+                .radar-blip { position: absolute; width: 8px; height: 8px; background: #fff; border-radius: 50%; box-shadow: 0 0 10px #fff; animation: blipFlash 4s infinite; }
+                .blip-label { position: absolute; top: 15px; left: -10px; font-size: 0.7rem; color: #10b981; font-family: monospace; background: rgba(0,0,0,0.8); padding: 2px 4px; border-radius: 3px; opacity: 0; animation: labelFlash 4s infinite; }
+                @keyframes blipFlash { 0%, 100% { opacity: 0.2; transform: scale(1); } 10% { opacity: 1; transform: scale(2); } }
+                @keyframes labelFlash { 0%, 100% { opacity: 0; } 10%, 20% { opacity: 1; } }
+            </style>
+        </section>
+
+        <!-- 5. Repository Structure (File Tree) -->
+        <section style="padding: 5rem 0 10rem 0;">
+            <div class="center-header mb-5">
+                <p class="section-subtitle" style="justify-content: center;">ORGANIZATION</p>
+                <h2 class="section-title">Standard Clean Architecture</h2>
+            </div>
+            <div style="max-width: 600px; margin: 0 auto; background: #0f172a; padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); font-family: monospace; color: #94a3b8; line-height: 2;">
+                <div style="color: #38bdf8; font-weight: bold; margin-bottom: 1rem;"><i class="ph-fill ph-folder-open"></i> my-awesome-project/</div>
+                <div class="tree-item" style="animation-delay: 0.1s;">├── <i class="ph-fill ph-folder text-blue"></i> src/</div>
+                <div class="tree-item" style="margin-left: 20px; animation-delay: 0.2s;">├── <i class="ph-fill ph-folder text-green"></i> components/</div>
+                <div class="tree-item" style="margin-left: 20px; animation-delay: 0.3s;">├── <i class="ph-fill ph-folder text-yellow"></i> controllers/</div>
+                <div class="tree-item" style="margin-left: 20px; animation-delay: 0.4s;">├── <i class="ph-fill ph-folder text-purple"></i> services/</div>
+                <div class="tree-item" style="margin-left: 20px; animation-delay: 0.5s;">└── <i class="ph-fill ph-file-code text-cyan"></i> index.ts</div>
+                <div class="tree-item" style="animation-delay: 0.6s;">├── <i class="ph-fill ph-folder text-blue"></i> tests/</div>
+                <div class="tree-item" style="animation-delay: 0.7s;">├── <i class="ph-fill ph-file-text text-gray"></i> .env.example</div>
+                <div class="tree-item" style="animation-delay: 0.8s;">├── <i class="ph-fill ph-file-text text-gray"></i> docker-compose.yml</div>
+                <div class="tree-item" style="animation-delay: 0.9s;">└── <i class="ph-fill ph-file-text text-gray"></i> README.md</div>
+            </div>
+            <style>
+                .tree-item { opacity: 0; transform: translateX(-10px); animation: fadeRight 0.5s forwards; }
+                @keyframes fadeRight { to { opacity: 1; transform: translateX(0); } }
+            </style>
+        </section>
+
+        <!-- Clean & Small Footer -->
+        <footer class="footer" style="padding: 2rem 0; background: rgba(5,5,5,0.95); text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+                <!-- Quick Navigation Links -->
+                <ul style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; list-style: none; padding: 0;">
+                    <li><a href="about.html" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main);">About & Skills</a></li>
+                    <li><a href="projects.html" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main);">Projects</a></li>
+                    <li><a href="achievements.html" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main);">Achievements</a></li>
+                    <li><a href="contact.html" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main);">Contact Me</a></li>
+                </ul>
+                <!-- Small Social Icons -->
+                <div class="social-links" style="justify-content: center; gap: 1rem;">
+                    <a href="https://github.com/Rohit01-prog" style="width: 40px; height: 40px; font-size: 1.2rem; background: #333; color: white; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="ph-fill ph-github-logo"></i></a>
+                    <a href="https://linkedin.com/in/rohit-maurya-3940b3397" style="width: 40px; height: 40px; font-size: 1.2rem; background: #0077b5; color: white; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="ph-fill ph-linkedin-logo"></i></a>
+                    <a href="mailto:rohil.bcastudent25.30916@cimage.in" style="width: 40px; height: 40px; font-size: 1.2rem; background: #ea4335; color: white; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="ph-fill ph-envelope-simple"></i></a>
+                </div>
+                <!-- Copyright -->
+                <div style="font-size: 0.8rem; color: var(--text-muted);">
+                    <p>© 2026 Rohit Maurya. All rights reserved. | Engineered with passion <i class="ph-fill ph-heart text-primary"></i></p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

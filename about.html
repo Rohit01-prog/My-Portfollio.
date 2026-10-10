@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Maurya - About & Skills</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Glowing Orbs -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <!-- Background Canvas for Scroll Animation -->
+    <canvas id="animation-canvas"></canvas>
+    
+    <!-- Dark overlay -->
+    <div class="bg-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo" style="display: flex; flex-direction: column; align-items: center; line-height: 1.2;">
+            <img src="logo_hands.png" alt="Logo" style="height: 30px; margin-bottom: 4px;">
+            <span style="font-size: 0.65rem; color: var(--primary);">▀▄▀▄▀ █☰ █▄ ◖ ⬤ █▚▞▌ █☰</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="about.html" class="active">ABOUT & SKILLS</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="achievements.html">ACHIEVEMENTS</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        <a href="contact.html" class="btn btn-outline">LET'S TALK</a>
+    </header>
+
+    <main class="main-content">
+        
+        <!-- Unique About Hero -->
+        <section style="padding: 10rem 0 5rem 0; position: relative; overflow: hidden;">
+            <!-- Huge Background Text -->
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 15rem; font-weight: 900; color: rgba(255,255,255,0.02); white-space: nowrap; pointer-events: none; z-index: -1;">WHO AM I</div>
+            
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; flex-wrap: wrap; gap: 4rem; align-items: center;">
+                <div style="flex: 1; min-width: 300px;">
+                    <p style="color: var(--primary); font-weight: 700; letter-spacing: 3px; margin-bottom: 1rem;">BEHIND THE CODE</p>
+                    <h2 style="font-size: 3.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 2rem;">I'm Rohit Maurya,<br>an AI & Web Engineer.</h2>
+                    <p style="font-size: 1.2rem; color: #94a3b8; line-height: 1.8; margin-bottom: 2rem;">I'm a passionate BCA student and Developer specializing in AI and Computer Vision applications. I don't just write code; I craft systems that solve complex problems using elegant logic and cutting-edge intelligence.</p>
+                    <p style="font-size: 1.2rem; color: #94a3b8; line-height: 1.8; margin-bottom: 3rem;">Based in Patna, Bihar, I'm currently focused on exploring the depths of generative AI, spatial computing, and scalable cloud architectures.</p>
+                    
+                    <a href="Rohit_Maurya_Resume.pdf" class="btn" style="padding: 1rem 2.5rem; font-size: 1.1rem; background: linear-gradient(45deg, #10b981, #059669); color: #fff; border-radius: 99px; box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4); font-weight: 800; text-transform: uppercase;">DOWNLOAD MY RESUME <i class="ph ph-download-simple" style="font-size: 1.3rem;"></i></a>
+                </div>
+                
+                <!-- Floating Info Glass Card -->
+                <div style="flex: 1; min-width: 300px; display: flex; justify-content: center;">
+                    <div style="background: rgba(20,20,20,0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); padding: 3rem; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); width: 100%; max-width: 400px; position: relative;">
+                        <div style="position: absolute; top: -20px; left: -20px; width: 100px; height: 100px; background: var(--primary); filter: blur(50px); opacity: 0.5;"></div>
+                        
+                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 2rem;">
+                            <li style="display: flex; align-items: center; gap: 1.5rem;">
+                                <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--primary);"><i class="ph-fill ph-user"></i></div>
+                                <div><p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 2px;">Name</p><h4 style="font-size: 1.2rem; color: #fff;">Rohit Maurya</h4></div>
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 1.5rem;">
+                                <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #06b6d4;"><i class="ph-fill ph-envelope-simple"></i></div>
+                                <div><p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 2px;">Email</p><h4 style="font-size: 1.1rem; color: #fff; word-break: break-all;">rohil.bcastudent...</h4></div>
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 1.5rem;">
+                                <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #10b981;"><i class="ph-fill ph-map-pin"></i></div>
+                                <div><p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 2px;">Location</p><h4 style="font-size: 1.2rem; color: #fff;">Patna, Bihar, India</h4></div>
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 1.5rem;">
+                                <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #f59e0b;"><i class="ph-fill ph-student"></i></div>
+                                <div><p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 2px;">Education</p><h4 style="font-size: 1.2rem; color: #fff;">BCA, Patliputra Univ.</h4></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Journey (Vertical Glowing Timeline) -->
+        <section style="padding: 6rem 0; background: linear-gradient(to bottom, transparent, rgba(10,10,10,0.8), transparent);">
+            <div class="center-header mb-5">
+                <p class="section-subtitle" style="justify-content: center;">MY PATH</p>
+                <h2 class="section-title">The Developer Journey</h2>
+            </div>
+            
+            <div style="max-width: 800px; margin: 4rem auto 0; position: relative; padding: 2rem;">
+                <!-- Center Line -->
+                <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 4px; background: linear-gradient(to bottom, transparent, var(--primary), #06b6d4, transparent); transform: translateX(-50%); box-shadow: 0 0 20px rgba(245, 158, 11, 0.5);"></div>
+                
+                <!-- Journey Item 1 (Left) -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5rem; position: relative;">
+                    <div style="width: 45%; text-align: right; padding-right: 3rem;">
+                        <div style="display: inline-block; background: rgba(245, 158, 11, 0.1); color: var(--primary); padding: 5px 15px; border-radius: 99px; font-weight: bold; margin-bottom: 10px; border: 1px solid var(--primary);">Jan 2025 - Present</div>
+                        <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 10px;">BCA Foundation</h3>
+                        <p class="text-muted" style="line-height: 1.6;">Started my Bachelor of Computer Applications at CIMAGE Group of Institutions. Diving deep into Data Structures, Java, and core computer science principles.</p>
+                    </div>
+                    <div style="position: absolute; left: 50%; transform: translateX(-50%); width: 24px; height: 24px; background: #000; border: 4px solid var(--primary); border-radius: 50%; z-index: 2; box-shadow: 0 0 20px var(--primary);"></div>
+                    <div style="width: 45%;"></div>
+                </div>
+                
+                <!-- Journey Item 2 (Right) -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5rem; position: relative;">
+                    <div style="width: 45%;"></div>
+                    <div style="position: absolute; left: 50%; transform: translateX(-50%); width: 24px; height: 24px; background: #000; border: 4px solid #06b6d4; border-radius: 50%; z-index: 2; box-shadow: 0 0 20px #06b6d4;"></div>
+                    <div style="width: 45%; text-align: left; padding-left: 3rem;">
+                        <div style="display: inline-block; background: rgba(6, 182, 212, 0.1); color: #06b6d4; padding: 5px 15px; border-radius: 99px; font-weight: bold; margin-bottom: 10px; border: 1px solid #06b6d4;">Mid 2025</div>
+                        <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 10px;">The AI & Vision Spark</h3>
+                        <p class="text-muted" style="line-height: 1.6;">Discovered the power of Python. Built my first Real-Time Gesture-Controlled Vehicle Simulator using OpenCV and MediaPipe, mapping physical gestures to virtual controls.</p>
+                    </div>
+                </div>
+                
+                <!-- Journey Item 3 (Left) -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5rem; position: relative;">
+                    <div style="width: 45%; text-align: right; padding-right: 3rem;">
+                        <div style="display: inline-block; background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 5px 15px; border-radius: 99px; font-weight: bold; margin-bottom: 10px; border: 1px solid #10b981;">Early 2026</div>
+                        <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 10px;">Advanced Machine Learning</h3>
+                        <p class="text-muted" style="line-height: 1.6;">Won 1st Position at the Prompt2Pixel Competition. Developed intelligent solutions leveraging state-of-the-art neural networks, intuitive UI design, and robust data pipelines.</p>
+                    </div>
+                    <div style="position: absolute; left: 50%; transform: translateX(-50%); width: 24px; height: 24px; background: #000; border: 4px solid #10b981; border-radius: 50%; z-index: 2; box-shadow: 0 0 20px #10b981;"></div>
+                    <div style="width: 45%;"></div>
+                </div>
+
+                <!-- Journey Item 4 (Right) -->
+                <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
+                    <div style="width: 45%;"></div>
+                    <div style="position: absolute; left: 50%; transform: translateX(-50%); width: 24px; height: 24px; background: #000; border: 4px solid #f97316; border-radius: 50%; z-index: 2; box-shadow: 0 0 20px #f97316; animation: pulseGlow 2s infinite alternate;"></div>
+                    <div style="width: 45%; text-align: left; padding-left: 3rem;">
+                        <div style="display: inline-block; background: rgba(249, 115, 22, 0.1); color: #f97316; padding: 5px 15px; border-radius: 99px; font-weight: bold; margin-bottom: 10px; border: 1px solid #f97316;">The Future</div>
+                        <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 10px;">Enterprise Scalability</h3>
+                        <p class="text-muted" style="line-height: 1.6;">Actively seeking internships. Preparing to master distributed systems, CI/CD pipelines, and cloud-agnostic architectures to build highly scalable, resilient applications.</p>
+                    </div>
+                </div>
+            </div>
+            <style>
+                @keyframes pulseGlow { 0% { box-shadow: 0 0 10px #f97316; } 100% { box-shadow: 0 0 30px #f97316; } }
+            </style>
+        </section>
+
+        <!-- Developer DNA (Circular Skill Rings) -->
+        <section style="padding: 8rem 0;">
+            <div class="center-header mb-5">
+                <p class="section-subtitle" style="justify-content: center;">DEVELOPER DNA</p>
+                <h2 class="section-title">Core Competencies</h2>
+            </div>
+            
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 4rem; max-width: 1100px; margin: 4rem auto 0; padding: 0 2rem;">
+                <!-- Ring 1 -->
+                <div style="text-align: center;">
+                    <div style="width: 160px; height: 160px; border-radius: 50%; background: conic-gradient(var(--primary) 95%, #222 0); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 0 30px rgba(245, 158, 11, 0.2); transition: transform 0.3s;">
+                        <div style="width: 140px; height: 140px; background: #111; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <span style="font-size: 2.2rem; font-weight: 900; color: #fff;">95<span style="font-size: 1.2rem; color: var(--primary);">%</span></span>
+                        </div>
+                    </div>
+                    <h4 style="color: #cbd5e1; font-size: 1.3rem; letter-spacing: 1px;">Algorithmic Thinking</h4>
+                </div>
+                <!-- Ring 2 -->
+                <div style="text-align: center;">
+                    <div style="width: 160px; height: 160px; border-radius: 50%; background: conic-gradient(#06b6d4 92%, #222 0); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 0 30px rgba(6, 182, 212, 0.2); transition: transform 0.3s;">
+                        <div style="width: 140px; height: 140px; background: #111; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <span style="font-size: 2.2rem; font-weight: 900; color: #fff;">92<span style="font-size: 1.2rem; color: #06b6d4;">%</span></span>
+                        </div>
+                    </div>
+                    <h4 style="color: #cbd5e1; font-size: 1.3rem; letter-spacing: 1px;">System Architecture</h4>
+                </div>
+                <!-- Ring 3 -->
+                <div style="text-align: center;">
+                    <div style="width: 160px; height: 160px; border-radius: 50%; background: conic-gradient(#10b981 90%, #222 0); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 0 30px rgba(16, 185, 129, 0.2); transition: transform 0.3s;">
+                        <div style="width: 140px; height: 140px; background: #111; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <span style="font-size: 2.2rem; font-weight: 900; color: #fff;">90<span style="font-size: 1.2rem; color: #10b981;">%</span></span>
+                        </div>
+                    </div>
+                    <h4 style="color: #cbd5e1; font-size: 1.3rem; letter-spacing: 1px;">Data Structures</h4>
+                </div>
+                <!-- Ring 4 -->
+                <div style="text-align: center;">
+                    <div style="width: 160px; height: 160px; border-radius: 50%; background: conic-gradient(#f97316 85%, #222 0); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 0 30px rgba(249, 115, 22, 0.2); transition: transform 0.3s;">
+                        <div style="width: 140px; height: 140px; background: #111; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <span style="font-size: 2.2rem; font-weight: 900; color: #fff;">85<span style="font-size: 1.2rem; color: #f97316;">%</span></span>
+                        </div>
+                    </div>
+                    <h4 style="color: #cbd5e1; font-size: 1.3rem; letter-spacing: 1px;">Database Design</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- What Fuels Me (Fun Glass Cards) -->
+        <section style="padding: 6rem 0 10rem 0;">
+            <div class="center-header mb-5">
+                <p class="section-subtitle" style="justify-content: center;">THE ARSENAL</p>
+                <h2 class="section-title">What Fuels My Code</h2>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; max-width: 1000px; margin: 3rem auto 0; padding: 0 2rem;">
+                <div style="background: rgba(20,20,20,0.5); backdrop-filter: blur(10px); padding: 3rem 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); text-align: center;">
+                    <i class="ph-fill ph-coffee" style="font-size: 4rem; color: #8b5cf6; margin-bottom: 1rem;"></i>
+                    <h4 style="color: #fff; font-size: 1.2rem;">Strong Coffee</h4>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: 10px;">The ultimate bug-fixing juice.</p>
+                </div>
+                <div style="background: rgba(20,20,20,0.5); backdrop-filter: blur(10px); padding: 3rem 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); text-align: center;">
+                    <i class="ph-fill ph-headphones" style="font-size: 4rem; color: #10b981; margin-bottom: 1rem;"></i>
+                    <h4 style="color: #fff; font-size: 1.2rem;">Lo-Fi Beats</h4>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: 10px;">For entering the deep-focus zone.</p>
+                </div>
+                <div style="background: rgba(20,20,20,0.5); backdrop-filter: blur(10px); padding: 3rem 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); text-align: center;">
+                    <i class="ph-fill ph-keyboard" style="font-size: 4rem; color: #06b6d4; margin-bottom: 1rem;"></i>
+                    <h4 style="color: #fff; font-size: 1.2rem;">Mechanical Keebs</h4>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: 10px;">Because every keystroke matters.</p>
+                </div>
+                <div style="background: rgba(20,20,20,0.5); backdrop-filter: blur(10px); padding: 3rem 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); text-align: center;">
+                    <i class="ph-fill ph-moon-stars" style="font-size: 4rem; color: #f59e0b; margin-bottom: 1rem;"></i>
+                    <h4 style="color: #fff; font-size: 1.2rem;">Dark Mode</h4>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: 10px;">Protecting eyes since day one.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Time Allocation -->
+        <section style="padding: 5rem 0;">
+            <div class="center-header mb-5">
+                <p class="section-subtitle" style="justify-content: center;">TIME MANAGEMENT</p>
+                <h2 class="section-title">How I Allocate My Time</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem; padding: 0 2rem;">
+                <!-- Bar 1 -->
+                <div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px; color: #fff; font-family: monospace;"><span>> System Architecture & Coding</span><span>50%</span></div>
+                    <div style="width: 100%; height: 12px; background: #1e293b; border-radius: 99px; overflow: hidden; box-shadow: inset 0 0 5px rgba(0,0,0,0.5);">
+                        <div style="width: 50%; height: 100%; background: linear-gradient(90deg, #38bdf8, #0ea5e9); animation: fillBar1 2s ease-out forwards; box-shadow: 0 0 10px #38bdf8;"></div>
+                    </div>
+                </div>
+                <!-- Bar 2 -->
+                <div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px; color: #fff; font-family: monospace;"><span>> AI Research & Model Tuning</span><span>30%</span></div>
+                    <div style="width: 100%; height: 12px; background: #1e293b; border-radius: 99px; overflow: hidden; box-shadow: inset 0 0 5px rgba(0,0,0,0.5);">
+                        <div style="width: 30%; height: 100%; background: linear-gradient(90deg, #10b981, #059669); animation: fillBar2 2s ease-out forwards; box-shadow: 0 0 10px #10b981;"></div>
+                    </div>
+                </div>
+                <!-- Bar 3 -->
+                <div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px; color: #fff; font-family: monospace;"><span>> Documentation & Testing</span><span>15%</span></div>
+                    <div style="width: 100%; height: 12px; background: #1e293b; border-radius: 99px; overflow: hidden; box-shadow: inset 0 0 5px rgba(0,0,0,0.5);">
+                        <div style="width: 15%; height: 100%; background: linear-gradient(90deg, #f59e0b, #d97706); animation: fillBar3 2s ease-out forwards; box-shadow: 0 0 10px #f59e0b;"></div>
+                    </div>
+                </div>
+                <!-- Bar 4 -->
+                <div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px; color: #fff; font-family: monospace;"><span>> Debugging (Coffee Powered)</span><span>5%</span></div>
+                    <div style="width: 100%; height: 12px; background: #1e293b; border-radius: 99px; overflow: hidden; box-shadow: inset 0 0 5px rgba(0,0,0,0.5);">
+                        <div style="width: 5%; height: 100%; background: linear-gradient(90deg, #ef4444, #dc2626); animation: fillBar4 2s ease-out forwards; box-shadow: 0 0 10px #ef4444;"></div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                @keyframes fillBar1 { 0% { width: 0; } 100% { width: 50%; } }
+                @keyframes fillBar2 { 0% { width: 0; } 100% { width: 30%; } }
+                @keyframes fillBar3 { 0% { width: 0; } 100% { width: 15%; } }
+                @keyframes fillBar4 { 0% { width: 0; } 100% { width: 5%; } }
+            </style>
+        </section>
+
+        <!-- 6. Tech Cloud Marquee -->
+        <section style="padding: 2rem 0; overflow: hidden; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.5); margin-bottom: 4rem;">
+            <div style="display: flex; gap: 2rem; width: max-content; animation: scrollTags 20s linear infinite;">
+                <span style="padding: 10px 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #38bdf8; font-family: monospace; font-size: 1.1rem;">React.js</span>
+                <span style="padding: 10px 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #10b981; font-family: monospace; font-size: 1.1rem;">Node.js</span>
+                <span style="padding: 10px 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #f59e0b; font-family: monospace; font-size: 1.1rem;">TensorFlow</span>
+                <span style="padding: 10px 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #8b5cf6; font-family: monospace; font-size: 1.1rem;">AWS EC2</span>
+                <span style="padding: 10px 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #ef4444; font-family: monospace; font-size: 1.1rem;">OpenCV</span>
+                <span style="padding: 10px 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #38bdf8; font-family: monospace; font-size: 1.1rem;">React.js</span>
+                <span style="padding: 10px 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #10b981; font-family: monospace; font-size: 1.1rem;">Node.js</span>
+                <span style="padding: 10px 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #f59e0b; font-family: monospace; font-size: 1.1rem;">TensorFlow</span>
+                <span style="padding: 10px 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #8b5cf6; font-family: monospace; font-size: 1.1rem;">AWS EC2</span>
+                <span style="padding: 10px 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #ef4444; font-family: monospace; font-size: 1.1rem;">OpenCV</span>
+            </div>
+            <style>
+                @keyframes scrollTags { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+            </style>
+        </section>
+
+        <!-- Clean & Small Footer -->
+        <footer class="footer" style="padding: 2rem 0; background: rgba(5,5,5,0.95); text-align: center; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 4rem;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+                
+                <!-- Quick Navigation Links -->
+                <ul style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; list-style: none; padding: 0;">
+                    <li><a href="about.html" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main);">About & Skills</a></li>
+                    <li><a href="projects.html" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main);">Projects</a></li>
+                    <li><a href="achievements.html" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main);">Achievements</a></li>
+                    <li><a href="contact.html" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main);">Contact Me</a></li>
+                </ul>
+
+                <!-- Small Social Icons -->
+                <div class="social-links" style="justify-content: center; gap: 1rem;">
+                    <a href="https://github.com/Rohit01-prog" style="width: 40px; height: 40px; font-size: 1.2rem; background: #333; color: white; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="ph-fill ph-github-logo"></i></a>
+                    <a href="https://linkedin.com/in/rohit-maurya-3940b3397" style="width: 40px; height: 40px; font-size: 1.2rem; background: #0077b5; color: white; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="ph-fill ph-linkedin-logo"></i></a>
+                    <a href="mailto:rohil.bcastudent25.30916@cimage.in" style="width: 40px; height: 40px; font-size: 1.2rem; background: #ea4335; color: white; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="ph-fill ph-envelope-simple"></i></a>
+                </div>
+
+                <!-- Copyright -->
+                <div style="font-size: 0.8rem; color: var(--text-muted);">
+                    <p>© 2026 Rohit Maurya. All rights reserved. | Engineered with passion <i class="ph-fill ph-heart text-primary"></i></p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
