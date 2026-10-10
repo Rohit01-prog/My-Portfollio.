@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+@keyframes textGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1, h2, h3, h4, h5, h6, .section-title, .hero-title {
+    font-family: 'Righteous', cursive !important;
+    background: linear-gradient(90deg, #d97706, #fbbf24, #ea580c, #fde047);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textGradient 4s ease infinite;
+}
+
 :root {
     --primary: #f59e0b;
     --primary-hover: #d97706;
