@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap');
 
 @keyframes textGradient {
@@ -356,6 +357,8 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+    border-radius: inherit;
 }
 
 .floating-badge {
@@ -762,6 +765,7 @@ input:focus, select:focus, textarea:focus {
     100% { top: -20vh; transform: translateX(0vw) scale(1) rotate(0deg); }
 }
 .real-swag-container {
+    will-change: top, transform, margin-left;
     position: fixed;
     width: 130px;
     height: 130px;
@@ -775,7 +779,7 @@ input:focus, select:focus, textarea:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+ will-change: top, transform;}
 .real-swag-img {
     width: 100%;
     height: 100%;
@@ -824,4 +828,248 @@ input:focus, select:focus, textarea:focus {
     animation-play-state: paused;
     filter: drop-shadow(0 0 25px currentColor);
     z-index: 10;
+}
+
+
+/* --- ADVANCED MOBILE OPTIMIZATIONS --- */
+html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+@media (max-width: 768px) {
+    h1, .section-title, .hero-title { font-size: 2.2rem !important; }
+    h2 { font-size: 1.8rem !important; }
+    h3 { font-size: 1.5rem !important; }
+    
+    .real-swag-container {
+    will-change: top, transform, margin-left;
+        width: 80px !important;
+        height: 80px !important;
+        border-width: 2px !important;
+     will-change: top, transform;}
+    .real-swag-label {
+        font-size: 0.5rem !important;
+        bottom: -20px !important;
+        padding: 2px 5px !important;
+    }
+    
+    section { padding: 4rem 1rem !important; }
+    .terminal-window { width: 100% !important; border-radius: 8px !important; }
+    
+    /* Responsive Tech Strip */
+    .tech-icon-new { font-size: 1.2rem !important; }
+    .tech-icon-new i { font-size: 1.8rem !important; }
+}
+
+/* --- MOBILE RESPONSIVENESS FIXES --- */
+@media (max-width: 1024px) {
+    .blazer-wrapper {
+        width: 300px !important;
+        height: 420px !important;
+        transform: translate(0, 0) !important;
+    }
+    .hero-right {
+        justify-content: center !important;
+        margin-top: 3rem;
+    }
+    .hero {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center;
+    }
+    .hero-left {
+        align-items: center;
+        text-align: center;
+    }
+    .hero-left .greeting, .hero-left .social-links, .hero-left div {
+        justify-content: center;
+    }
+    /* About page fixes */
+    .about-layout {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .about-layout > div {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .blazer-wrapper {
+        width: 260px !important;
+        height: 360px !important;
+    }
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
+    .hero-subtitle {
+        font-size: 1.2rem !important;
+    }
+}
+
+
+/* --- REAL SWAG FLOATING ANIMATIONS --- */
+@keyframes floatHeaderToFooter {
+    0% { top: -20vh; transform: translateX(0vw) scale(1) rotate(0deg); }
+    25% { top: 40vh; transform: translateX(-20vw) scale(1.1) rotate(15deg); }
+    50% { top: 120vh; transform: translateX(10vw) scale(1) rotate(5deg); }
+    75% { top: 40vh; transform: translateX(20vw) scale(0.9) rotate(-15deg); }
+    100% { top: -20vh; transform: translateX(0vw) scale(1) rotate(0deg); }
+}
+.real-swag-container {
+    position: fixed;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: rgba(217, 119, 6, 0.2);
+    backdrop-filter: blur(5px);
+    border: 3px solid rgba(217, 119, 6, 0.8);
+    box-shadow: 0 0 30px rgba(217, 119, 6, 0.5), inset 0 0 20px rgba(217, 119, 6, 0.5);
+    overflow: visible;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    will-change: top, transform, margin-left;
+}
+.real-swag-img {
+    width: 100%;
+    height: 100%;
+    background-image: url('aws_swag_real.png');
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+.real-swag-label {
+    position: absolute;
+    bottom: -25px;
+    background: rgba(217, 119, 6, 0.9);
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.65rem;
+    font-weight: bold;
+    border: 1px solid #b45309;
+    white-space: nowrap;
+    text-shadow: 0 0 5px rgba(0,0,0,0.8);
+    z-index: 10;
+}
+
+@keyframes floatUpParticles {
+    0% { top: 110vh; transform: translateX(0) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.5; }
+    50% { transform: translateX(30px) rotate(180deg); }
+    90% { opacity: 0.5; }
+    100% { top: -10vh; transform: translateX(-30px) rotate(360deg); opacity: 0; }
+}
+
+/* --- GEN-Z CYBER HUD MARGINS --- */
+.cyber-hud {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 50;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+/* Hide on smaller screens to avoid overlapping main content */
+@media (max-width: 1300px) {
+    .cyber-hud { display: none !important; }
+}
+
+.left-hud {
+    left: 20px;
+}
+
+.right-hud {
+    right: 20px;
+}
+
+.hud-line { width: 4px; height: 250px;
+    background: linear-gradient(to bottom, transparent, var(--primary), transparent);
+    animation: pulseLine 3s infinite;
+}
+
+.hud-text { font-family: 'Press Start 2P', monospace; font-size: 0.9rem;
+    color: var(--primary);
+    text-shadow: 0 0 10px var(--primary);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.hud-dot { width: 15px; height: 15px;
+    background: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--primary), 0 0 30px var(--primary);
+    animation: blinkDot 1.5s infinite;
+}
+
+.hud-marquee {
+    display: inline-block;
+    animation: scrollVertical 15s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes pulseLine {
+    0%, 100% { height: 100px; opacity: 0.3; }
+    50% { height: 200px; opacity: 1; }
+}
+
+@keyframes blinkDot {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.5); opacity: 1; }
+}
+
+@keyframes scrollVertical {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(-100%); }
+}
+
+/* --- HOLOGRAPHIC CORNERS --- */
+.cyber-corner {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border: 4px solid var(--primary);
+    z-index: 40;
+    pointer-events: none;
+    opacity: 0.7;
+    box-shadow: 0 0 20px rgba(217, 119, 6, 0.5), inset 0 0 20px rgba(217, 119, 6, 0.5);
+    animation: cornerPulse 4s infinite alternate;
+}
+@media (max-width: 1300px) {
+    .cyber-corner { display: none !important; }
+}
+
+.cyber-corner.top-left {
+    top: 40px; left: 40px;
+    border-right: none; border-bottom: none;
+    border-top-left-radius: 15px;
+}
+.cyber-corner.top-right {
+    top: 40px; right: 40px;
+    border-left: none; border-bottom: none;
+    border-top-right-radius: 15px;
+}
+.cyber-corner.bottom-left {
+    bottom: 40px; left: 40px;
+    border-right: none; border-top: none;
+    border-bottom-left-radius: 15px;
+}
+.cyber-corner.bottom-right {
+    bottom: 40px; right: 40px;
+    border-left: none; border-top: none;
+    border-bottom-right-radius: 15px;
+}
+
+@keyframes cornerPulse {
+    0% { transform: scale(1); opacity: 0.5; filter: hue-rotate(0deg); }
+    100% { transform: scale(1.1); opacity: 1; filter: hue-rotate(15deg); }
 }

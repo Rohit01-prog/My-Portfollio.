@@ -98,9 +98,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
 // --- ADVANCED REAL SWAG PARALLAX SYSTEM ---
 document.addEventListener('DOMContentLoaded', () => {
-    // Generate an array of all possible swag parts from the 3 images
     const allSwags = [
         { bg: 'aws_swag_real.png', size: '200%', pos: '10% 80%', label: 'Community Bag' },
         { bg: 'aws_swag_real.png', size: '250%', pos: '40% 10%', label: 'Builder Tumbler' },
@@ -122,30 +123,24 @@ document.addEventListener('DOMContentLoaded', () => {
     container.style.width = '100vw';
     container.style.height = '100vh';
     container.style.pointerEvents = 'none';
-    container.style.zIndex = '0'; // Above background, but behind relative text
+    container.style.zIndex = '0'; 
     document.body.appendChild(container);
 
     const activeSwags = [];
-    const numItems = 2 + Math.floor(Math.random() * 2); // 2 or 3 items max
+    const numItems = 2 + Math.floor(Math.random() * 2);
 
     for(let i = 0; i < numItems; i++) {
         const cfg = allSwags[Math.floor(Math.random() * allSwags.length)];
-        
         const wrapper = document.createElement('div');
         wrapper.className = 'real-swag-container';
         
-        // Random starting X position
         const startX = Math.random() * 90;
         wrapper.style.left = startX + 'vw';
         
-        // Use CSS Animation for Header to Footer continuous movement
-        const animDuration = 25 + Math.random() * 15; // 10s to 25s
-        const animDelay = -(Math.random() * 10); // Start at random point in animation
+        const animDuration = 25 + Math.random() * 15;
+        const animDelay = -(Math.random() * 10);
         wrapper.style.animation = "floatHeaderToFooter " + animDuration + "s ease-in-out infinite";
         wrapper.style.animationDelay = animDelay + "s";
-        
-        // Add random X drift
-        const speedX = (Math.random() - 0.5) * 1.5; 
         
         const card = document.createElement('div');
         card.style.width = '100%';
@@ -168,8 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
         wrapper.appendChild(card);
         container.appendChild(wrapper);
 
-        activeSwags.push({ wrapper: wrapper, card: card, speedX: speedX });
+        activeSwags.push({ wrapper: wrapper, card: card });
     }
+
     window.addEventListener('mousemove', (e) => {
         const mouseX = e.clientX;
         const mouseY = e.clientY;
@@ -182,5 +178,94 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 0; i < activeSwags.length; i++) {
             activeSwags[i].card.style.transform = "perspective(800px) rotateX(" + tiltX + "deg) rotateY(" + tiltY + "deg)";
         }
+    });
+});
+
+
+
+// --- SMALL GLOWING TECH ICONS PARTICLE SYSTEM ---
+document.addEventListener('DOMContentLoaded', () => {
+    const iconClasses = [
+        'ph-github-logo', 'ph-amazon-logo', 'ph-code', 'ph-terminal', 
+        'ph-cpu', 'ph-database', 'ph-cloud', 'ph-braces'
+    ];
+    const colors = ['#f59e0b', '#38bdf8', '#10b981', '#ec4899', '#8b5cf6'];
+    
+    const particleContainer = document.createElement('div');
+    particleContainer.style.position = 'fixed';
+    particleContainer.style.top = '0';
+    particleContainer.style.left = '0';
+    particleContainer.style.width = '100vw';
+    particleContainer.style.height = '100vh';
+    particleContainer.style.pointerEvents = 'none';
+    particleContainer.style.zIndex = '-2';
+    document.body.appendChild(particleContainer);
+
+    for (let i = 0; i < 15; i++) {
+        const icon = document.createElement('i');
+        const iconClass = iconClasses[Math.floor(Math.random() * iconClasses.length)];
+        icon.className = 'ph-fill ' + iconClass;
+        
+        const size = 15 + Math.random() * 25;
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        
+        icon.style.position = 'absolute';
+        icon.style.fontSize = size + 'px';
+        icon.style.color = color;
+        icon.style.filter = 'drop-shadow(0 0 10px ' + color + ')';
+        icon.style.opacity = (0.2 + Math.random() * 0.4).toString();
+        
+        icon.style.left = (Math.random() * 100) + 'vw';
+        
+        const duration = 15 + Math.random() * 20;
+        const delay = -(Math.random() * 20);
+        
+        icon.style.animation = 'floatUpParticles ' + duration + 's linear infinite';
+        icon.style.animationDelay = delay + 's';
+        
+        particleContainer.appendChild(icon);
+    }
+});
+
+// --- GEN-Z CYBER HUD MARGINS (LEFT & RIGHT) ---
+document.addEventListener('DOMContentLoaded', () => {
+    // Left HUD: Dynamic Coordinates & Line
+    const leftHud = document.createElement('div');
+    leftHud.className = 'cyber-hud left-hud';
+    leftHud.innerHTML = `
+        <div class="hud-line"></div>
+        <div class="hud-text" id="hud-coords">SYS.LOC // 00.00</div>
+        <div class="hud-dot"></div>
+    `;
+    
+    // Right HUD: Vertical Scrolling Tech Text
+    const rightHud = document.createElement('div');
+    rightHud.className = 'cyber-hud right-hud';
+    rightHud.innerHTML = `
+        <div class="hud-text" style="writing-mode: vertical-rl; transform: rotate(180deg); letter-spacing: 3px;">
+            <span class="hud-marquee">>>> AI ENGINEER // AWS CLOUD // FULL STACK // CREATIVE DEVELOPER <<<</span>
+        </div>
+        <div class="hud-line"></div>
+    `;
+    
+    document.body.appendChild(leftHud);
+    document.body.appendChild(rightHud);
+    
+    // Update coordinates on mouse move to look "GenZ Tech / Interactive"
+    window.addEventListener('mousemove', (e) => {
+        const coords = document.getElementById('hud-coords');
+        if (coords) {
+            const x = (e.clientX / window.innerWidth * 100).toFixed(2);
+            const y = (e.clientY / window.innerHeight * 100).toFixed(2);
+            coords.innerText = `SYS.LOC // ${x}:${y}`;
+        }
+    });
+    
+    // --- GEN-Z HOLOGRAPHIC CORNERS ---
+    const corners = ['top-left', 'top-right', 'bottom-left', 'bottom-right'];
+    corners.forEach(pos => {
+        const corner = document.createElement('div');
+        corner.className = `cyber-corner ${pos}`;
+        document.body.appendChild(corner);
     });
 });
