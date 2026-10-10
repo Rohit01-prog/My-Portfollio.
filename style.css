@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap');
 
 @keyframes textGradient {
     0% { background-position: 0% 50%; }
@@ -7,7 +7,7 @@
 }
 
 h1, h2, h3, h4, h5, h6, .section-title, .hero-title {
-    font-family: 'Righteous', cursive !important;
+    font-family: 'Poppins', sans-serif !important; letter-spacing: -0.5px;
     background: linear-gradient(90deg, #d97706, #fbbf24, #ea580c, #fde047);
     background-size: 300% 300%;
     -webkit-background-clip: text;
@@ -797,5 +797,31 @@ input:focus, select:focus, textarea:focus {
     border: 1px solid #b45309;
     white-space: nowrap;
     text-shadow: 0 0 5px rgba(0,0,0,0.8);
+    z-index: 10;
+}
+
+@keyframes techBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+.tech-icon {
+    font-size: 3rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 0 8px currentColor);
+    animation: techBounce 3s ease-in-out infinite;
+}
+.tech-icon:nth-child(even) {
+    animation-delay: 0.5s;
+}
+.tech-icon:nth-child(odd) {
+    animation-delay: 1s;
+}
+.tech-icon:hover, .tech-icon:active {
+    transform: scale(1.3) !important;
+    animation-play-state: paused;
+    filter: drop-shadow(0 0 25px currentColor);
     z-index: 10;
 }
